@@ -26,3 +26,29 @@ Optimizar el proceso de gestión de reclamos de siniestros de autos automatizand
 - Estandarizar las decisiones de evaluación a través de un motor de reglas de negocio configurable que elimine la variabilidad entre revisores, asegurando que reclamos con las mismas características reciban siempre el mismo tratamiento.
 
 - Garantizar la trazabilidad completa de cada decisión (automática o manual), registrando las reglas evaluadas, las banderas detectadas y la justificación de cada resolución.
+
+---
+
+## 2. Alcance del MVP
+
+### 2.1 IN (Incluido en la primera versión)
+1. **Gestion completa de asegurados (CRUD):** El gestor puede registrar, consultar, actualizar y eliminar asegurados (nombre, apellido, número de identificación, dirección, teléfono, correo electrónico).
+
+2. **Gestión completa de vehículos (CRUD):** El gestor puede registrar, consultar, actualizar y eliminar vehículos para asegurar (marca, modelo, año, placa).
+
+3. **Gestión completa de pólizas (CRUD):** El gestor puede registrar, consultar, actualizar y eliminar pólizas de seguro (número, asegurado, valor asegurado, vigencia), vinculándolas a vehículos previamente registrados.
+
+4. **Registro de reclamo de siniestro:** El asegurado registra un reclamo proporcionando datos del incidente (fecha, descripción, monto estimado,ubicación, fotografías). El sistema asigna un número de seguimiento único.
+
+5. **Validación automática de póliza y evaluación por reglas de negocio:** El sistema verifica que la póliza esté activa. Si la póliza no es válida, el reclamo se rechaza con motivo claro. Si es válida, aplica las siguientes reglas:
+
+   - **Regla de monto:** Si el monto estimado es ≤ al deducible mínimo → no procede como reclamo, se descarta. Si es > al deducible mínimo y < 20% del valor asegurado → candidato a aprobación automática. Si es ≥ 20% del valor asegurado → bandera roja, revisión manual.
+   El deducible se calcula como el mayor entre: 10% del monto del siniestro, 1% del valor asegurado, y $200.
+   - **Regla de historial:** Si el asegurado tiene 0 siniestros en los últimos 12 meses → candidato a aprobación automática. Si tiene ≥ 2 siniestros en los últimos 12 meses → bandera roja, revisión manual.
+   - **Regla de antigüedad de póliza:** Si la póliza tiene ≥ 30 días de vigencia → candidato a aprobación automática. Si tiene < 30 días → bandera roja, se envía a revisión manual.
+
+**Nota:** Se realizo una investigación de las reglas de negocio de las principales aseguradoras del Ecuador y se determino que las reglas definidas son las mas adecuadas para el MVP.
+
+6. **Panel del gestor de seguros:** El gestor puede ver los reclamos escalados de un siniestro con sus banderas rojas, y registrar su resolución (aprobar/rechazar) con justificación. Adiconalmente puede ver información del asegurado.
+
+7. **Consulta de estado:** El asegurado puede consultar en cualquier momento el estado actual de su reclamo (aprobado, en revisión, rechazado) y el motivo de la decisión.
