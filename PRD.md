@@ -66,3 +66,36 @@ Optimizar el proceso de gestión de reclamos de siniestros de autos automatizand
 - Generar reportes de trazabilidad de los reclamos.
 - Gestión de pagos y transferencias bancarias reales (se notifica la aprobación).
 - Reportería avanzada y dashboards analíticos.
+
+## 3. Riesgos de Negocio y Técnicos
+
+> **Nota:** Esta sección fue liderada por **QA (Jean Pierre)** con visión preventiva de los posibles puntos de fallo del sistema.
+
+### 3.1 Riesgos de Negocio
+
+## 3.1 Riesgos de Negocio
+
+A continuación se describen los principales riesgos identificados para el MVP, junto con cómo se planea manejarlos.
+
+---
+
+**R001 – Desconfianza en decisiones automáticas**  
+Existe el riesgo de que el asegurado no entienda por qué su reclamo fue aprobado o rechazado, especialmente cuando la decisión es automática. Esto puede generar reclamos, mala experiencia o pérdida de confianza en el sistema.  
+
+**Cómo se maneja:**  
+Se mostrará siempre una explicación simple del resultado, indicando las razones principales de la decisión (por ejemplo: monto, vigencia de póliza o historial).
+
+---
+
+**R002 – Reglas que no coinciden con la póliza real**  
+Las reglas definidas en el MVP podrían no alinearse completamente con las condiciones reales de las pólizas, lo que puede provocar decisiones incorrectas o conflictos con el negocio.  
+
+**Cómo se maneja:**  
+Antes de salir a producción, las reglas serán validadas con el área de negocio para asegurar que reflejen correctamente las políticas del negocio.
+
+---
+**R003 – Detección limitada de fraude**  
+Al tratarse de una primera versión, las reglas son básicas y podrían no detectar ciertos casos de fraude, como reclamos repetidos o patrones sospechosos.  
+
+**Cómo se maneja:**  
+Se mantendrán criterios altos para la aprobación automática y cualquier caso dudoso será enviado a revisión manual. Además, se podrán ir agregando reglas con el tiempo, para prevenir inconvenientes.
