@@ -78,16 +78,41 @@ Y queda disponible para ser usado en una póliza o vehículo
 
 **Como** desarrollador backend
 **Quiero** crear los controladores REST para las entidades del MVP
-**Para** soportar las operaciones CRUD y el flujo de reclamos
+**Para** soportar las operaciones CRUD y el flujo completo de reclamos
 
 **Endpoints principales:**
 CRUD completo en `/api/v1/asegurados`, `/api/v1/vehiculos` y `/api/v1/polizas`
 
-Reclamos: registrar, consultar estado, listar escalados, registrar resolución
+Reclamos:
+- `POST /api/v1/reclamos` — registrar reclamo
+- `GET /api/v1/reclamos/{numeroSeguimiento}/estado` — consultar estado
+- `POST /api/v1/reclamos/{numeroSeguimiento}/resolucion` — aprobar o rechazar con justificación
+- `PUT /api/v1/reclamos/{numeroSeguimiento}/estado` — actualizar estado del reclamo
 
 **Criterios de Aceptación**
 
 - Existen controllers para todas las entidades
+- Los endpoints de reclamos cubren el ciclo completo: registro, consulta, escalado y resolución
 - Los endpoints validan campos obligatorios y responden en JSON
 - Respuestas exitosas devuelven HTTP 200 o 201
 - Respuestas erróneas devuelven HTTP 400 o 404 con mensaje descriptivo
+
+### HT-004: Seguridad y Control de Acceso
+
+**Como** arquitecto de software
+**Quiero** implementar autenticación y autorización en la API
+**Para** que solo usuarios autenticados puedan operar según su rol
+
+**Stack:** Spring Security, JWT
+
+**Roles:**
+- `GESTOR` — acceso completo a vehículos, pólizas, asegurados y resolución de reclamos
+- `ASEGURADO` — solo puede registrar y consultar sus propios reclamos
+- `ADMIN` — acceso total incluyendo configuración del sistema
+
+**Criterios de Aceptación**
+
+- Los endpoints protegidos rechazan peticiones sin token válido con HTTP 401
+- Un usuario no puede operar sobre recursos de otro rol con HTTP 403
+- El token JWT expira y no puede reutilizarse una vez vencido
+- Existe un endpoint `POST /api/v1/auth/login` que devuelve el token
