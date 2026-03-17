@@ -99,3 +99,34 @@ Al tratarse de una primera versión, las reglas son básicas y podrían no detec
 
 **Cómo se maneja:**  
 Se mantendrán criterios altos para la aprobación automática y cualquier caso dudoso será enviado a revisión manual. Además, se podrán ir agregando reglas con el tiempo, para prevenir inconvenientes.
+
+
+### 3.2 Riesgos Técnicos
+## 3.2 Riesgos Técnicos
+
+A continuación se describen algunos riesgos técnicos identificados en el sistema y cómo se planea manejarlos.
+
+---
+
+**T001 – Motor de reglas difícil de mantener**  
+A medida que el sistema crece, las reglas pueden volverse difíciles de entender y mantener, especialmente si están implementadas directamente en el código. Esto puede generar errores y dificultar cambios futuros.  
+
+**Cómo se maneja:**  
+Se diseñará el motor de reglas de forma desacoplada y configurable, evitando tener lógica hardcodeada.
+
+---
+
+**T002 – Errores en condiciones límite**  
+Los casos cercanos a los umbrales definidos (por ejemplo, montos justo en el límite) pueden generar decisiones incorrectas si no se manejan bien.  
+
+**Cómo se maneja:**  
+Se implementarán pruebas específicas para estos casos (valores límite) para asegurar que el sistema responda correctamente.
+
+---
+
+**T004 – Dependencia de datos ingresados por el usuario**  
+El sistema toma decisiones basadas en la información que ingresa el usuario. Si estos datos son incorrectos o incompletos, la evaluación puede ser errónea.  
+
+**Cómo se maneja:**  
+Se aplicarán validaciones en los campos obligatorios y se solicitará evidencia (como fotografías) para respaldar la información del reclamo.
+
