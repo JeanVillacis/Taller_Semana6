@@ -59,3 +59,10 @@ Optimizar el proceso de gestión de reclamos de siniestros de autos automatizand
 6. **Panel del gestor de seguros:** El gestor puede ver los reclamos escalados de un siniestro con sus banderas rojas, y registrar su resolución (aprobar/rechazar) con justificación. Adiconalmente puede ver información del asegurado.
 
 7. **Consulta de estado:** El asegurado puede consultar en cualquier momento el estado actual de su reclamo (aprobado, en revisión, rechazado) y el motivo de la decisión.
+
+### 2.2 OUT (Excluido del MVP)
+
+- Ajustes de las reglas del negocio, realizado por el administrador.
+- Generar reportes de trazabilidad de los reclamos.
+- Gestión de pagos y transferencias bancarias reales (se notifica la aprobación).
+- Reportería avanzada y dashboards analíticos.
