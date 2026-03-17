@@ -27,7 +27,14 @@ Optimizar el proceso de gestión de reclamos de siniestros de autos automatizand
 
 - Garantizar la trazabilidad completa de cada decisión (automática o manual), registrando las reglas evaluadas, las banderas detectadas y la justificación de cada resolución.
 
----
+
+### 1.5 Usuarios objetivo
+
+| Usuario | Descripción | Necesidad principal |
+|---------|-------------|---------------------|
+| **Asegurado** | Persona con póliza de auto activa que sufre un siniestro | Registrar su reclamo y consultar el estado de su resolución |
+| **Gestor** | Empleado que administra pólizas y resuelve reclamos escalados | Gestionar vehículos y pólizas (CRUD completo), y resolver los casos que levanten banderas rojas con contexto claro |
+| **Administrador del Sistema** | Responsable de configurar reglas de negocio | Ajustar umbrales y reglas de evaluación sin necesidad de despliegue técnico |
 
 ## 2. Alcance del MVP
 
