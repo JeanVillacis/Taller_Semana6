@@ -19,3 +19,10 @@ Construir una plataforma de evaluación  automatizada de siniestros de autos que
 
 Optimizar el proceso de gestión de reclamos de siniestros de autos automatizando la evaluación y aprobación de casos de bajo riesgo, reduciendo los tiempos de respuesta de días a minutos, liberando al equipo para enfocarse en casos que realmente requieran criterio humano, y garantizando decisiones consistentes y auditables que fortalezcan la confianza del asegurado en el servicio.
 
+### 1.4 Objetivos específicos
+
+- Reducir el tiempo de resolución de siniestros de baja complejidad de un promedio de 7-30 días hábiles a minutos, mediante la aprobación automatizada de reclamos que cumplan con las reglas de bajo riesgo definidas por el negocio, liberando la carga operativa del equipo para que concentren su tiempo en los casos que genuinamente requieran análisis humano.
+
+- Estandarizar las decisiones de evaluación a través de un motor de reglas de negocio configurable que elimine la variabilidad entre revisores, asegurando que reclamos con las mismas características reciban siempre el mismo tratamiento.
+
+- Garantizar la trazabilidad completa de cada decisión (automática o manual), registrando las reglas evaluadas, las banderas detectadas y la justificación de cada resolución.
