@@ -21,53 +21,73 @@ Dado que el gestor está autenticado en el sistema
 Cuando registra un asegurado con todos los datos requeridos
 Entonces el sistema guarda el asegurado correctamente
 Y queda disponible para ser usado en una póliza o vehículo
+```
 
 
-Historias Técnicas y de Arquitectura
 
-HT-001: Configuración del Proyecto Base
-COMO arquitecto de software
-QUIERO configurar el esqueleto del proyecto con el stack definido
-PARA tener un entorno estandarizado desde donde el equipo pueda empezar a trabajar
 
-Stack: Java 17+, Spring Boot (Web, Data JPA, Validation), Docker + docker-compose
+## Historias Técnicas y de Arquitectura
 
-Criterios de Aceptación
--Proyecto base
--El proyecto compila sin errores
 
-Docker
-Existe un docker-compose.yml que levanta la aplicación
+### HT-001: Configuración del Proyecto Base
 
-Configuración base
-Health check
-GET /api/health responde HTTP 200 OK
+**Como** arquitecto de software
+**Quiero** configurar el esqueleto del proyecto con el stack definido
+**Para** que el equipo pueda empezar a trabajar sobre una base común
 
-HT-002: Diseño y Creación de la Base de Datos
-COMO desarrollador backend
-QUIERO diseñar el esquema relacional en PostgreSQL e implementar las entidades en el código
-PARA persistir de forma segura los datos de asegurados, vehículos, pólizas y siniestros
+**Stack:** Java 17+, Spring Boot (Web, Data JPA, Validation), Docker + docker-compose
 
-Stack: PostgreSQL, Hibernate / Spring Data JPA
+**Criterios de Aceptación**
 
-Tablas principales:
--asegurados: id, nombre, apellido, numero_identificacion, direccion, telefono, correo_electronico
--vehiculos: id, marca, modelo, anio, placa, chasis, motor
--polizas: id, numero, asegurado_id, vehiculo_id, valor_asegurado, vigencia_inicio, vigencia_fin, estado
--reclamos: id, poliza_id, fecha_incidente, descripcion, monto_estimado, ubicacion, estado, resolucion, justificacion, numero_seguimiento
--reclamo_fotografias: id, reclamo_id, url_fotografia
--reclamo_banderas: id, reclamo_id, descripcion_bandera
+- El proyecto compila sin errores
+- Existe un `docker-compose.yml` que levanta la aplicación
+- Incluye manejo global de excepciones (Controller Advice)
+- `GET /api/health` responde HTTP 200 OK
 
-Criterios de Aceptación
+---
 
-Docker
-El docker-compose.yml incluye el contenedor de PostgreSQL con sus variables de entorno
+### HT-002: Diseño de la Base de Datos
 
-Conexión
-La aplicación se conecta exitosamente a la base de datos al arrancar
+**Como** desarrollador backend
+**Quiero** implementar el esquema relacional en PostgreSQL con sus entidades JPA
+**Para** persistir los datos del sistema de forma estructurada
 
-Esquema
-Las entidades JPA generan la estructura de tablas correcta al iniciar
+**Stack:** PostgreSQL, Hibernate / Spring Data JPA
 
-Integridad referencial
-No se puede eliminar un asegurado si tiene pólizas vinculadas
+**Tablas principales:**
+- `asegurados` — id, nombre, apellido, numero_identificacion, direccion, telefono, correo_electronico
+- `vehiculos` — id, marca, modelo, anio, placa, chasis, motor
+- `polizas` — id, numero, asegurado_id, vehiculo_id, valor_asegurado, vigencia_inicio, vigencia_fin, estado
+- `reclamos` — id, poliza_id, fecha_incidente, descripcion, monto_estimado, ubicacion, estado, resolucion, justificacion, numero_seguimiento
+- `reclamo_fotografias` — id, reclamo_id, url_fotografia
+- `reclamo_banderas` — id, reclamo_id, descripcion_bandera
+
+**Criterios de Aceptación**
+
+- El `docker-compose.yml` incluye el contenedor de PostgreSQL configurado
+
+- La aplicación se conecta a la base de datos al arrancar
+
+- Las tablas se generan correctamente al iniciar
+
+- No se puede eliminar un asegurado con pólizas vinculadas
+
+---
+
+### HT-003: Endpoints REST
+
+**Como** desarrollador backend
+**Quiero** crear los controladores REST para las entidades del MVP
+**Para** soportar las operaciones CRUD y el flujo de reclamos
+
+**Endpoints principales:**
+CRUD completo en `/api/v1/asegurados`, `/api/v1/vehiculos` y `/api/v1/polizas`
+
+Reclamos: registrar, consultar estado, listar escalados, registrar resolución
+
+**Criterios de Aceptación**
+
+- Existen controllers para todas las entidades
+- Los endpoints validan campos obligatorios y responden en JSON
+- Respuestas exitosas devuelven HTTP 200 o 201
+- Respuestas erróneas devuelven HTTP 400 o 404 con mensaje descriptivo
