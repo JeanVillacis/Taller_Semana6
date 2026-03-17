@@ -23,7 +23,29 @@ Entonces el sistema guarda el asegurado correctamente
 Y queda disponible para ser usado en una póliza o vehículo
 ```
 
+#### Escenario: Faltan datos obligatorios
+```gherkin
+Dado que el gestor está autenticado en el sistema
+Cuando intenta registrar un asegurado sin completar todos los campos obligatorios
+Entonces el sistema no permite guardar el registro
+Y muestra qué campos faltan
+```
 
+#### Escenario: Identificación registrada previamente
+```gherkin
+Dado que ya existe un asegurado con una identificación registrada
+Cuando el gestor intenta registrar otro asegurado con la misma identificación
+Entonces el sistema no permite guardar el registro
+Y muestra un mensaje indicando que ya existe
+```
+
+#### Escenario: Correo electrónico formato inválido
+```gherkin
+Dado que el gestor está autenticado en el sistema
+Cuando ingresa un correo con formato inválido
+Entonces el sistema no permite guardar el registro
+Y muestra un mensaje indicando el error en el correo
+```
 
 
 ## Historias Técnicas y de Arquitectura
