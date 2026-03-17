@@ -1,3 +1,28 @@
+# Historias de Usuario - Evaluador Automatizado de Siniestros
+
+---
+
+## HU001 – Registro de asegurado
+
+
+**Como** gestor de seguros,  
+**Quiero** registrar los datos personales de un asegurado en el sistema,  
+**Para** que pueda ser vinculado a un vehículo y una póliza de seguro.
+
+**Prioridad:** Alta  
+**Story Points:** 3
+
+
+### Criterios de aceptación
+
+#### Escenario: Registro correcto
+```gherkin
+Dado que el gestor está autenticado en el sistema
+Cuando registra un asegurado con todos los datos requeridos
+Entonces el sistema guarda el asegurado correctamente
+Y queda disponible para ser usado en una póliza o vehículo
+
+
 Historias Técnicas y de Arquitectura
 
 HT-001: Configuración del Proyecto Base
