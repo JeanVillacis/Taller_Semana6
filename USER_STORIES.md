@@ -253,6 +253,96 @@ Entonces el sistema me informa que no se encontró ninguna póliza con ese crite
 Y no se muestra información de la poliza.
 ```
 
+## HU-007: Registro de Reclamo de Siniestro
+
+**Como** asegurado con una póliza de auto activa,  
+**Quiero** registrar un reclamo de siniestro proporcionando los datos del incidente y fotografías en png o jpg,  
+**Para** iniciar el proceso de evaluación y obtener una respuesta sobre mi compensación.
+
+**Prioridad:** Alta  
+**Story Points:** 5
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Registro exitoso con datos completos y válidos
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando registro un reclamo proporcionando todos los campos obligatorios con valores válidos
+Y adjunto al menos una fotografía en formato png o jpg
+Entonces el sistema confirma que el reclamo fue registrado exitosamente
+Y el reclamo toma el estado REGISTRADO
+Y el sistema me asigna un número de seguimiento único para ese reclamo
+```
+
+#### Escenario 2: Intento de registro sin seleccionar una póliza activa
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y no tengo ninguna póliza activa y vigente disponible para seleccionar
+Cuando intento acceder al formulario de registro de reclamo
+Entonces el sistema me informa que no es posible registrar reclamos sin una póliza activa y vigente
+Y no se crea ningún registro de reclamo en el sistema
+```
+
+#### Escenario 3: Intento de registro con campos obligatorios faltantes
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando intento registrar un reclamo sin completar uno o más campos obligatorios
+Entonces el sistema rechaza el registro
+Y me indica cuáles son los campos obligatorios que faltan por completar
+Y no se crea ningún registro de reclamo en el sistema
+```
+
+#### Escenario 4: Intento de registro con monto estimado inválido
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando intento registrar un reclamo con un monto estimado menor o igual a cero
+Entonces el sistema rechaza el registro
+Y me indica que el monto estimado debe ser un valor positivo
+Y no se crea ningún registro de reclamo en el sistema
+```
+
+#### Escenario 5: Intento de registro con fecha de incidente fuera del período de vigencia
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando intento registrar un reclamo con una fecha de incidente posterior a la fecha actual o anterior al inicio de vigencia de la póliza
+Entonces el sistema rechaza el registro
+Y me indica que la fecha del incidente debe estar dentro del período de vigencia de la póliza y no puede ser futura
+Y no se crea ningún registro de reclamo en el sistema
+```
+
+#### Escenario 6: Registro exitoso con fotografías válidas en formato permitido
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando registro un reclamo adjuntando fotografías en formato png o jpg
+Entonces el sistema acepta las fotografías y las asocia al reclamo
+Y el reclamo se registra exitosamente con las evidencias adjuntas
+```
+
+#### Escenario 7: Intento de registro con fotografías en formato no permitido
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando intento registrar un reclamo adjuntando archivos en un formato distinto a png o jpg
+Entonces el sistema rechaza los archivos adjuntos
+Y me indica que solo se permiten fotografías en formato png o jpg
+Y no se crea ningún registro de reclamo en el sistema
+```
+
+#### Escenario 8: Intento de registro sin adjuntar fotografías
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo una póliza activa y vigente
+Cuando intento registrar un reclamo sin adjuntar ninguna fotografía
+Entonces el sistema rechaza el registro
+Y me indica que es obligatorio adjuntar al menos una fotografía como evidencia del siniestro
+Y no se crea ningún registro de reclamo en el sistema
+```
+
 ## Historias Técnicas y de Arquitectura
 
 
