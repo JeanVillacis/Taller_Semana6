@@ -320,6 +320,33 @@ Entonces el sistema me informa que no se encontró ningún vehículo con ese cri
 Y no se muestra información parcial ni de otro vehículo
 ```
 
+### Casos de Prueba
+
+#### CP001-HU-004: Visualización del listado de vehículos registrados
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existen los vehículos "Chevrolet Aveo" (placa: PBA-1234) y "Kia Rio" (placa: PBC-5678) registrados
+Cuando se buscan "Vehículos"
+Entonces el sistema muestra un listado que contiene "Chevrolet Aveo" y "Kia Rio"
+Y cada fila muestra marca, modelo, año y placa del vehículo
+```
+
+#### CP002-HU-004: Consulta del detalle de un vehículo existente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe el vehículo "Chevrolet Aveo" con placa "PBA-1234"
+Cuando busco información sobre el vehículo con placa "PBA-1234"
+Entonces el sistema muestra el detalle con marca "Chevrolet", modelo "Aveo", año "2022" y placa "PBA-1234"
+```
+
+#### CP003-HU-004: Intento de consulta de un vehículo que no existe
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Cuando intenta buscar un vehículo con placa "ZZZ-0000" que no existe en el sistema
+Entonces el sistema muestra un mensaje indicando que no se encontró ningún vehículo
+Y no se muestra información
+```
+
 ## HU-005: Registrar Póliza de Seguro
 
 **Como** gestor de seguros,  
