@@ -382,6 +382,47 @@ Cuando el sistema ejecuta la validación de elegibilidad de la póliza
 Entonces el reclamo queda habilitado para continuar con la evaluación por reglas de la poliza
 Y no se registra ninguna bandera ni motivo de rechazo en esta fase
 ```
+## HU-009: Evaluación de reclamo por reglas de deducible y monto
+
+**Como** sistema de evaluación de siniestros,  
+**Quiero** evaluar automáticamente cada reclamo elegible aplicando las reglas de deducible y monto respecto al valor asegurado,  
+**Para** resolver sin intervención manual los reclamos de bajo riesgo por monto y escalar los que superen el umbral definido.
+
+**Prioridad:** Alta  
+**Story Points:** 5
+
+**Nota:** El deducible se calcula como el mayor entre: 10% del monto del siniestro, 1% del valor asegurado y $200. El umbral de escalamiento por monto es el 20% del valor asegurado (según reglas definidas en el PRD sección 2.1).
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Descarte por monto menor o igual al deducible calculado
+```gherkin
+Dado que existe un reclamo elegible para evaluación
+Y el monto estimado del reclamo es menor o igual al deducible calculado (el mayor entre 10% del monto del siniestro, 1% del valor asegurado y $200)
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo queda en estado de descarte
+Y se registra el motivo indicando que el monto no supera el deducible aplicable
+```
+
+#### Escenario 2: Aprobación automática por monto dentro del rango permitido
+```gherkin
+Dado que existe un reclamo elegible para evaluación
+Y el monto estimado supera el deducible calculado
+Y el monto estimado es menor al 20% del valor asegurado
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo continúa a la evaluación por historial de siniestros (HU-010)
+Y no se registra ninguna bandera de escalamiento por monto
+```
+
+#### Escenario 3: Escalamiento por monto que supera el umbral del valor asegurado
+```gherkin
+Dado que existe un reclamo elegible para evaluación
+Y el monto estimado supera el deducible calculado
+Y el monto estimado es igual o mayor al 20% del valor asegurado
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo se escala a revisión manual
+Y se registra la bandera correspondiente al monto elevado respecto al valor asegurado
+```
 
 ## Historias Técnicas y de Arquitectura
 
