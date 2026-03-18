@@ -48,6 +48,77 @@ Entonces el sistema no permite guardar el registro
 Y muestra un mensaje indicando el error en el correo
 ```
 
+### Casos de Prueba
+
+#### CP001-HU-001: Registro exitoso con todos los datos válidos
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de asegurados
+Cuando ingresa "Juan" en el campo nombre
+Y ingresa "Pérez" en el campo apellido
+Y ingresa "1712345678" en el campo identificación
+Y ingresa "Av. Amazonas N36-152" en el campo dirección
+Y ingresa "0991234567" en el campo teléfono
+Y ingresa "juan.perez@correo.com" en el campo correo electrónico
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de confirmación "Asegurado registrado exitosamente"
+Y el asegurado "Juan Pérez" aparece en el listado de asegurados
+```
+
+#### CP002-HU-001: Intento de registro sin completar el campo nombre
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de asegurados
+Cuando deja vacío el campo nombre
+Y ingresa "Pérez" en el campo apellido
+Y ingresa "1712345678" en el campo identificación
+Y ingresa "Av. Amazonas N36-152" en el campo dirección
+Y ingresa "0991234567" en el campo teléfono
+Y ingresa "juan.perez@correo.com" en el campo correo electrónico
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que el campo nombre es obligatorio
+Y no se crea ningún registro de asegurado en el sistema
+```
+
+#### CP003-HU-001: Intento de registro sin completar ningún campo
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de asegurados
+Cuando deja vacíos todos los campos del formulario
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra mensajes de error indicando todos los campos obligatorios faltantes
+Y no se crea ningún registro de asegurado en el sistema
+```
+
+#### CP004-HU-001: Intento de registro con identificación ya existente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe un asegurado registrado con identificación "1712345678"
+Y se encuentra en la pantalla de registro de asegurados
+Cuando ingresa "María" en el campo nombre
+Y ingresa "López" en el campo apellido
+Y ingresa "1712345678" en el campo identificación
+Y completa el resto de campos con datos válidos
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que ya existe un asegurado con esa identificación
+Y no se crea un nuevo registro de asegurado
+```
+
+#### CP005-HU-001: Intento de registro con correo electrónico en formato inválido
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de asegurados
+Cuando ingresa "Juan" en el campo nombre
+Y ingresa "Pérez" en el campo apellido
+Y ingresa "1712345679" en el campo identificación
+Y ingresa "Av. Amazonas N36-152" en el campo dirección
+Y ingresa "0991234567" en el campo teléfono
+Y ingresa "juan.perez-correo" en el campo correo electrónico
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que el formato de correo electrónico no es válido
+Y no se crea ningún registro de asegurado en el sistema
+```
+
 ## HU-002: Consultar Asegurados
 
 **Como** gestor de seguros,
