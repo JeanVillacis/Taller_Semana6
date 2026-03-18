@@ -831,7 +831,16 @@ Cuando el motor de reglas evalúa el reclamo
 Entonces el reclamo queda en estado "DESCARTADO"
 Y el motivo registrado indica que el monto no supera el deducible aplicado de $250.00
 ```
-
+#### CP003-HU-009: Aprobación por monto que supera el deducible y está por debajo del 20% del valor asegurado
+```gherkin
+Dado que existe un reclamo elegible con monto estimado de $3,500.00
+Y la póliza asociada tiene un valor asegurado de $25,000.00
+Y el deducible calculado es $350.00
+Y el 20% del valor asegurado es $5,000.00
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo continúa a la evaluación por historial de siniestros
+Y no se registra ninguna bandera de escalamiento por monto
+```
 
 ## HU-010: Evaluación de reclamo por historial de siniestros
 
