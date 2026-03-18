@@ -164,6 +164,32 @@ Se implementará autenticación y autorización basada en roles (asegurado, gest
 | T002 | Errores en condiciones límite | Alta | Alto | **Crítica** | Pruebas unitarias específicas para valores en los umbrales exactos y en sus bordes inmediatos. |
 | T004 | Datos incorrectos ingresados por el usuario | Alta | Medio | **Alta** | Validaciones en campos obligatorios. Evidencia fotográfica como respaldo del reclamo. |
 | T005 | Vulnerabilidad en datos sensibles | Media | Crítico | **Crítica** | Autenticación por roles, HTTPS obligatorio, hashing de contraseñas, endpoints protegidos por rol. |
+
+
+### 3.5 Visión Preventiva
  
+ 
+ 
+#### Líneas de acción preventiva
+
+
+**1. Probar desde el inicio, no al final**  
+Las reglas de negocio se convertirán en casos de prueba antes de empezar a programar. Cada regla definida en la sección 2.1 tendrá sus propios escenarios: el flujo esperado, casos límite y situaciones de error. 
+
+**2. Cobertura enfocada en umbrales y combinaciones**  
+El motor de reglas no evalúa condiciones de forma aislada, sino en conjunto (monto, historial, antigüedad, etc.). Por eso, además de probar cada regla individualmente, se van a cubrir combinaciones entre ellas.
+
+**3. Uso de datos de prueba realistas**  
+Se armará un set de datos que represente situaciones reales: pólizas nuevas, clientes con historial de siniestros, montos justo en los límites del deducible y pólizas próximas a vencer.
+
+**4. Trazabilidad como parte obligatoria del sistema**  
+La trazabilidad no se tratará como algo opcional. Cada decisión, ya sea automática o manual, debe quedar registrada con las reglas evaluadas, las alertas detectadas y su justificación. 
+
+**5. Revisión conjunta entre QA y negocio**  
+Antes de iniciar cada ciclo de pruebas, QA contrastará las reglas implementadas con lo que realmente definió el negocio. La idea es detectar malentendidos antes de que se conviertan en fallos funcionales. No reemplaza las pruebas, pero ayuda a reducir errores desde etapas tempranas.
+
+**6. Manejo de fallos del motor de reglas**  
+Se definirá un comportamiento claro para cuando el motor de reglas falle (por ejemplo, ante una excepción o un timeout). En lugar de tomar una decisión automática, el sistema enviará el caso a revisión manual y registrará el problema. Esto evita que un error técnico termine en una decisión incorrecta.
+
 
 
