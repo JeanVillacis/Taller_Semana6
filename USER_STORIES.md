@@ -621,6 +621,13 @@ Entonces el sistema muestra un mensaje de confirmación "Reclamo registrado exit
 Y el sistema asigna un número de seguimiento al reclamo
 Y el reclamo aparece como "REGISTRADO"
 ```
+#### CP002-HU-007: Intento de registro sin póliza activa disponible
+```gherkin
+Dado que el asegurado "Carlos Ruiz" ha iniciado sesión en el sistema
+Y no tiene ninguna póliza activa y vigente
+Cuando intenta acceder al registro de reclamos
+Entonces el sistema muestra un mensaje indicando que no es posible registrar reclamos sin una póliza activa y vigente
+```
 
 ## HU-008: Validación de póliza para procesamiento de reclamo
 
