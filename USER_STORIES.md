@@ -499,7 +499,13 @@ Cuando busca las pólizas registradas
 Entonces el sistema muestra un listado que contiene las pólizas "POL-2026-001" y "POL-2026-002"
 Y muestra número de póliza, asegurado, estado y fechas de vigencia
 ```
-
+#### CP002-HU-006: Consulta del detalle de una póliza existente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe la póliza "POL-2026-001" vinculada al asegurado "Juan Pérez" y al vehículo "Chevrolet Aveo - PBA-1234"
+Cuando busca a la póliza "POL-2026-001" en el listado
+Entonces el sistema muestra el detalle con número "POL-2026-001", valor asegurado, fechas de vigencia, estado
+```
 
 ## HU-007: Registro de Reclamo de Siniestro
 
