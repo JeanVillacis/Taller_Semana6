@@ -1,3 +1,5 @@
+# Historias Técnicas
+
 ## HT-001 – Configuración del Proyecto Base
 `Story Points: 2`
 
@@ -10,7 +12,7 @@
 | 1 | Inicializar proyecto Spring Boot con dependencias: Web, Data JPA, Validation, Security |
 | 2 | Configurar `application.properties` con las variables de entorno para la conexión a la BD |
 | 3 | Crear `Dockerfile` para la aplicación Spring Boot |
-| 4 | Crear `docker-compose.yml` que levante la aplicación Spring Boot y la BD |
+| 4 | Crear `docker-compose.yml` que levante la aplicación Spring Boot |
 | 5 | Implementar endpoint `GET /api/health` |
 
 ### QA
@@ -19,6 +21,29 @@
 | --- | --- |
 
 ---
+
+## HT-002 – Diseño de la Base de Datos
+`Story Points: 3`
+
+**Justificación SP:** Define el esquema completo del sistema con relaciones entre múltiples entidades y constraints de integridad referencial.
+
+### DEV
+| # | Tarea |
+|---|-------|
+| 1 | Definir entidades JPA: `Asegurado`, `Vehiculo`, `Poliza`, `Reclamo`, `ReclamoFotografia`, `ReclamoBandera` |
+| 2 | Configurar relaciones `@OneToMany` y `@ManyToOne` entre entidades |
+| 3 | Agregar contenedor PostgreSQL al `docker-compose.yml` con variables de entorno |
+| 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas |
+| 5 | Agregar constraint de integridad referencial: no eliminar asegurado con pólizas vinculadas |
+
+### QA
+| # | Tarea |
+|---|-------|
+| --- | --- |
+
+---
+
+# Historias de Usuario
 
 ## HU-001 – Registro de Asegurado
 `Story Points: 3`
