@@ -15,15 +15,16 @@
 
 ### Criterios de aceptación
 
-#### Escenario: Registro correcto
+#### Escenario 1: Registro correcto
 ```gherkin
 Dado que el gestor está autenticado en el sistema
-Cuando registra un asegurado con todos los datos requeridos
+Cuando registra un asegurado con todos los datos requeridos (nombre, apellido, identificación, dirección, teléfono 
+y correo electrónico)
 Entonces el sistema guarda el asegurado correctamente
 Y queda disponible para ser usado en una póliza o vehículo
 ```
 
-#### Escenario: Faltan datos obligatorios
+#### Escenario 2:  Faltan datos obligatorios
 ```gherkin
 Dado que el gestor está autenticado en el sistema
 Cuando intenta registrar un asegurado sin completar todos los campos obligatorios
@@ -31,7 +32,7 @@ Entonces el sistema no permite guardar el registro
 Y muestra qué campos faltan
 ```
 
-#### Escenario: Identificación registrada previamente
+#### Escenario 3: Identificación registrada previamente
 ```gherkin
 Dado que ya existe un asegurado con una identificación registrada
 Cuando el gestor intenta registrar otro asegurado con la misma identificación
@@ -39,7 +40,7 @@ Entonces el sistema no permite guardar el registro
 Y muestra un mensaje indicando que ya existe
 ```
 
-#### Escenario: Correo electrónico formato inválido
+#### Escenario 4: Correo electrónico formato inválido
 ```gherkin
 Dado que el gestor está autenticado en el sistema
 Cuando ingresa un correo con formato inválido
@@ -47,6 +48,25 @@ Entonces el sistema no permite guardar el registro
 Y muestra un mensaje indicando el error en el correo
 ```
 
+## HU-002: Consultar Asegurados
+
+**Como** gestor de seguros,
+**Quiero** consultar asegurados registrados en el sistema, tanto en listado como en detalle individual,
+**Para** verificar su información antes de vincularlos a pólizas o vehículos.
+
+**Prioridad:** Alta  
+**Story Points:** 2
+
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Consulta de listado de asegurados
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existen asegurados registrados
+Cuando consulto la lista de asegurados
+Entonces visualizo un listado con la información de identificación básica de cada asegurado
+```
 
 ## Historias Técnicas y de Arquitectura
 
