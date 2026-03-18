@@ -397,6 +397,24 @@ Entonces el sistema rechaza el registro
 Y me indica que el rango de vigencia no es válido
 Y no se crea ningún registro de póliza en el sistema
 ```
+### Casos de Prueba
+
+#### CP001-HU-005: Registro exitoso de póliza con todos los datos válidos
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe el asegurado "Juan Pérez" con identificación "1712345678"
+Y existe el vehículo "Chevrolet Aveo" con placa "PBA-1234"
+Cuando ingresa "POL-2026-001" en el campo número de póliza
+Y selecciona al asegurado "Juan Pérez"
+Y selecciona el vehículo "Chevrolet Aveo - PBA-1234"
+Y ingresa "25000.00" en el campo valor asegurado
+Y ingresa "01/01/2026" en el campo fecha de inicio de vigencia
+Y ingresa "01/01/2027" en el campo fecha de fin de vigencia
+Y guarda la información
+Entonces el sistema muestra un mensaje de confirmación "Póliza registrada exitosamente"
+```
+
+
 ## HU-006: Consultar Pólizas
 
 **Como** gestor de seguros,  
