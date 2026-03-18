@@ -628,6 +628,22 @@ Y no tiene ninguna póliza activa y vigente
 Cuando intenta acceder al registro de reclamos
 Entonces el sistema muestra un mensaje indicando que no es posible registrar reclamos sin una póliza activa y vigente
 ```
+#### CP003-HU-007: Intento de registro sin completar el campo descripción
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene la póliza "POL-2026-001" activa y vigente
+Cuando selecciona la póliza "POL-2026-001"
+Y ingresa "15/03/2026" en el campo fecha del incidente
+Y deja vacío el campo descripción
+Y ingresa "3500.00" en el campo monto estimado
+Y ingresa "Quito" en el campo ubicación
+Y adjunta el archivo "foto_siniestro.jpg"
+Y hace clic en el botón "Registrar reclamo"
+Entonces el sistema muestra un mensaje de error indicando que el campo descripción es obligatorio
+Y no se crea ningún registro de reclamo
+```
+
+
 
 ## HU-008: Validación de póliza para procesamiento de reclamo
 
