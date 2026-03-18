@@ -2,7 +2,7 @@
 
 ---
 
-## HU001 – Registro de asegurado
+## HU-001 – Registro de asegurado
 
 
 **Como** gestor de seguros,  
@@ -67,6 +67,23 @@ Y existen asegurados registrados
 Cuando consulto la lista de asegurados
 Entonces visualizo un listado con la información de identificación básica de cada asegurado
 ```
+#### Escenario 2: Consulta del detalle de un asegurado específico
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un asegurado registrado en el sistema
+Cuando consulto el detalle de ese asegurado
+Entonces visualizo toda la información disponible para ese asegurado
+```
+
+#### Escenario 3: Consulta de un asegurado inexistente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento consultar el detalle de un asegurado que no existe en el sistema
+Entonces el sistema me informa que no se encontró ningún asegurado con ese criterio
+Y no se muestra información parcial ni de otro asegurado
+```
+
+
 
 ## Historias Técnicas y de Arquitectura
 
