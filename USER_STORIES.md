@@ -646,7 +646,6 @@ Y no se crea ningún registro de reclamo
 ```gherkin
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
-Y se encuentra en la pantalla de registro de reclamo
 Cuando selecciona la póliza "POL-2026-001"
 Y ingresa "15/03/2026" en el campo fecha del incidente
 Y ingresa "Colisión leve" en el campo descripción
@@ -657,6 +656,21 @@ Y hace clic en el botón "Registrar reclamo"
 Entonces el sistema muestra un mensaje de error indicando que el monto estimado debe ser un valor positivo
 Y no se crea ningún registro de reclamo
 ```
+
+#### CP005-HU-007: Intento de registro con fecha de incidente en el futuro
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene la póliza "POL-2026-001" activa y vigente
+Y la fecha actual es "17/03/2026"
+Cuando selecciona la póliza "POL-2026-001"
+Y ingresa "25/12/2026" en el campo fecha del incidente
+Y completa el resto de campos con datos válidos
+Y adjunta el archivo "foto_siniestro.jpg"
+Y hace clic en el botón "Registrar reclamo"
+Entonces el sistema muestra un mensaje de error indicando que la fecha del incidente no puede ser en el futuro
+Y no se crea ningún registro de reclamo
+```
+
 
 ## HU-008: Validación de póliza para procesamiento de reclamo
 
