@@ -742,6 +742,16 @@ Cuando el sistema ejecuta la validación de elegibilidad de la póliza
 Entonces el reclamo "REC-2026-001" cambia al estado "RECHAZADO"
 Y el motivo registrado indica "Póliza no vigente"
 ```
+#### CP002-HU-008: Rechazo automático por póliza con vigencia expirada
+```gherkin
+Dado que existe un reclamo registrado con número de seguimiento "REC-2026-002"
+Y la póliza asociada "POL-2025-010" tiene fecha de fin de vigencia "31/12/2025"
+Y la fecha actual es "17/03/2026"
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo "REC-2026-002" cambia al estado "RECHAZADO"
+Y el motivo registrado indica "Póliza no vigente"
+```
+
 
 ## HU-009: Evaluación de reclamo por reglas de deducible y monto
 
