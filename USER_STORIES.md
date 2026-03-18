@@ -506,6 +506,13 @@ Y existe la póliza "POL-2026-001" vinculada al asegurado "Juan Pérez" y al veh
 Cuando busca a la póliza "POL-2026-001" en el listado
 Entonces el sistema muestra el detalle con número "POL-2026-001", valor asegurado, fechas de vigencia, estado
 ```
+#### CP003-HU-006: Intento de consulta de una póliza que no existe
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Cuando intenta buscar la póliza "POL-0000-000" que no existe en el sistema
+Entonces el sistema muestra un mensaje indicando que no se encontró ninguna póliza
+Y no se muestra información
+```
 
 ## HU-007: Registro de Reclamo de Siniestro
 
