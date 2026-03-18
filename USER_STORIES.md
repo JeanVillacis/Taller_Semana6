@@ -811,6 +811,19 @@ Entonces el reclamo se escala a revisión manual
 Y se registra la bandera correspondiente al monto elevado respecto al valor asegurado
 ```
 
+### Casos de Prueba
+
+#### CP001-HU-009: Descarte por monto menor al deducible
+```gherkin
+Dado que existe un reclamo elegible con monto estimado de $150.00
+Y la póliza asociada tiene un valor asegurado de $25,000.00
+Y el deducible calculado es $250.00 
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo queda en estado "DESCARTADO"
+Y el motivo registrado indica que el monto no supera el deducible aplicable de $250.00
+```
+
+
 ## HU-010: Evaluación de reclamo por historial de siniestros
 
 **Como** sistema de evaluación de siniestros,  
