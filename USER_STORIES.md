@@ -751,7 +751,15 @@ Cuando el sistema ejecuta la validación de elegibilidad de la póliza
 Entonces el reclamo "REC-2026-002" cambia al estado "RECHAZADO"
 Y el motivo registrado indica "Póliza no vigente"
 ```
-
+#### CP003-HU-008: Escalamiento por antigüedad de póliza menor a 30 días
+```gherkin
+Dado que existe un reclamo registrado con número de seguimiento "REC-2026-003"
+Y la póliza asociada "POL-2026-020" está activa con fecha de inicio de vigencia "01/03/2026"
+Y la fecha del reclamo es "17/03/2026" 
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo "REC-2026-003" cambia al estado "EN REVISIÓN MANUAL"
+Y se registra la bandera "Antigüedad de póliza insuficiente (menor a 30 días)"
+```
 
 ## HU-009: Evaluación de reclamo por reglas de deducible y monto
 
