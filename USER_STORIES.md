@@ -167,6 +167,58 @@ Entonces el sistema me informa que no se encontró ningún vehículo con ese cri
 Y no se muestra información parcial ni de otro vehículo
 ```
 
+## HU-005: Registrar Póliza de Seguro
+
+**Como** gestor de seguros,  
+**Quiero** registrar una póliza asociándola a un asegurado y a un vehículo previamente registrados,  
+**Para** que el asegurado pueda presentar reclamos contra esa póliza.
+
+**Prioridad:** Alta  
+**Story Points:** 3
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Registro exitoso de póliza con datos completos y válidos
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un vehículo registrado en el sistema
+Y existe un asegurado registrado en el sistema
+Y el número de póliza no existe previamente en el sistema
+Cuando registro una póliza proporcionando todos los campos obligatorios con valores válidos
+Entonces el sistema confirma que la póliza fue registrada exitosamente
+Y la póliza queda vinculada al vehículo y al asegurado indicados
+Y la póliza toma el estado ACTIVA
+```
+
+#### Escenario 2: Registro de póliza a un vehículo inexistente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento registrar una póliza asociada a un vehículo que no existe en el sistema
+Entonces el sistema rechaza el registro
+Y me informa que el vehículo indicado no se encuentra registrado
+Y no se crea ningún registro de póliza en el sistema
+```
+
+#### Escenario 3: Intento de registro con número de póliza duplicado
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y ya existe una póliza registrada con un número determinado
+Cuando intento registrar otra póliza con ese mismo número
+Entonces el sistema rechaza el registro
+Y me informa que ya existe una póliza registrada con ese número
+Y no se crea ningún registro nuevo en el sistema
+```
+
+#### Escenario 4: Intento de registro con rango de vigencia inválido
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento registrar una póliza con una fecha de fin anterior o igual a la fecha de inicio
+Entonces el sistema rechaza el registro
+Y me indica que el rango de vigencia no es válido
+Y no se crea ningún registro de póliza en el sistema
+```
+
+
 ## Historias Técnicas y de Arquitectura
 
 
