@@ -136,7 +136,7 @@ Y no se crea ningún registro de asegurado en el sistema
 Dado que soy un gestor autenticado en el sistema
 Y existen asegurados registrados
 Cuando consulto la lista de asegurados
-Entonces visualizo un listado con la información de identificación básica de cada asegurado
+Entonces visualizo un listado que muestra nombre, apellido e identificación de cada asegurado
 ```
 #### Escenario 2: Consulta del detalle de un asegurado específico
 ```gherkin
