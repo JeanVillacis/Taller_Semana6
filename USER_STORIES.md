@@ -83,7 +83,54 @@ Entonces el sistema me informa que no se encontró ningún asegurado con ese cri
 Y no se muestra información parcial ni de otro asegurado
 ```
 
+## HU-003: Registrar Vehículo
 
+**Como** gestor de seguros,  
+**Quiero** registrar los datos de un vehículo en el sistema,  
+**Para** que pueda ser asociado a una póliza de seguro.
+
+**Prioridad:** Alta  
+**Story Points:** 3
+
+
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Registro exitoso de vehículo con datos completos
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando registro un vehículo proporcionando todos los campos obligatorios (marca, modelo, año y placa) con valores válidos
+Y la placa del vehículo no existe previamente en el sistema
+Entonces el sistema confirma que el vehículo fue registrado exitosamente
+Y el vehículo queda disponible para ser asociado a una póliza
+```
+
+#### Escenario 2: Intento de registro con datos obligatorios faltantes
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento registrar un vehículo sin completar uno o más campos obligatorios
+Entonces el sistema rechaza el registro
+Y me indica cuáles son los campos obligatorios que faltan por completar
+```
+
+#### Escenario 3: Intento de registro con placa duplicada
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y ya existe un vehículo registrado con una placa determinada
+Cuando intento registrar otro vehículo con esa misma placa
+Entonces el sistema rechaza el registro
+Y me informa que ya existe un vehículo registrado con esa placa
+Y no se crea ningún registro nuevo en el sistema
+```
+
+#### Escenario 4: Intento de registro con formato de datos inválidos
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento registrar un vehículo con un campo que no cumple el formato esperado
+Entonces el sistema rechaza el registro
+Y me indica qué campo contiene el error y por qué el valor no es válido
+Y no se crea ningún registro nuevo en el sistema
+```
 
 ## Historias Técnicas y de Arquitectura
 
