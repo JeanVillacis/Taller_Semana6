@@ -145,3 +145,12 @@ El sistema maneja información personal de los asegurados  e información financ
 Se implementará autenticación y autorización basada en roles (asegurado, gestor) desde el MVP. Los endpoints de la API serán protegidos para que cada rol acceda únicamente a la información que le corresponde. Las contraseñas se almacenarán con hashing seguro y se utilizará HTTPS para toda la comunicación.
 
 ---
+## 3.3 Matriz de Riesgos de Negocio
+
+| ID | Riesgo | Probabilidad | Impacto | Prioridad | Estrategia de mitigación |
+|----|--------|:------------:|:-------:|:---------:|--------------------------|
+| R001 | Desconfianza en decisiones automáticas | Alta | Alto | **Crítica** | Mostrar justificación clara en cada decisión con lenguaje simple para el asegurado. |
+| R002 | Reglas desalineadas con la póliza real | Media | Alto | **Alta** | Validar reglas con el área de negocio antes de producción. Revisión periódica post-lanzamiento. |
+| R003 | Detección limitada de fraude | Media | Alto | **Alta** | Umbrales conservadores para aprobación automática. Casos dudosos se escalan a revisión manual. |
+| R004 | Aprobaciones que generen pérdida económica | Media | Crítico | **Crítica** | Muestreo manual en las primeras semanas. Ajuste de umbrales si se detectan inconsistencias. |
+
