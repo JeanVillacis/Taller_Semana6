@@ -469,7 +469,7 @@ Entonces el sistema muestra un mensaje de error indicando que el valor asegurado
 Dado que soy un gestor autenticado en el sistema
 Y existen pólizas registradas en el sistema
 Cuando consulto la lista de pólizas
-Entonces visualizo un listado con la información de identificación básica de cada póliza
+Entonces visualizo un listado que muestra número de póliza, asegurado, estado y fechas de vigencia de cada póliza
 ```
 
 #### Escenario 2: Consulta del detalle de una póliza existente
@@ -477,7 +477,7 @@ Entonces visualizo un listado con la información de identificación básica de 
 Dado que soy un gestor autenticado en el sistema
 Y existe una póliza registrada en el sistema
 Cuando consulto el detalle de esa póliza
-Entonces visualizo toda la información disponible para esa póliza
+Entonces visualizo número de póliza, valor asegurado, fechas de vigencia, estado, y el vehículo y asegurado vinculados a ella
 Y puedo identificar el vehículo y el asegurado vinculados a ella
 ```
 
