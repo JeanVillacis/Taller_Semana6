@@ -670,7 +670,16 @@ Y hace clic en el botón "Registrar reclamo"
 Entonces el sistema muestra un mensaje de error indicando que la fecha del incidente no puede ser en el futuro
 Y no se crea ningún registro de reclamo
 ```
-
+#### CP005-HU-008: Intento de registro con archivo en formato PDF
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene la póliza "POL-2026-001" activa y vigente
+Cuando completa todos los campos obligatorios con datos válidos
+Y adjunta el archivo "documento.pdf"
+Y hace clic en el botón "Registrar reclamo"
+Entonces el sistema muestra un mensaje de error indicando que solo se permiten fotografías en formato png o jpg
+Y no se crea ningún registro de reclamo
+```
 
 ## HU-008: Validación de póliza para procesamiento de reclamo
 
