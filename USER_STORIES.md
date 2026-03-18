@@ -413,6 +413,12 @@ Y ingresa "01/01/2027" en el campo fecha de fin de vigencia
 Y guarda la información
 Entonces el sistema muestra un mensaje de confirmación "Póliza registrada exitosamente"
 ```
+#### CP002-HU-005: Intento de registro asociando un vehículo inexistente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Cuando intenta asociar la póliza a un vehículo que no existe en el sistema
+Entonces el sistema muestra un mensaje de error indicando que el vehículo indicado no se encuentra registrado
+```
 
 
 ## HU-006: Consultar Pólizas
