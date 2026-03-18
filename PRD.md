@@ -69,10 +69,6 @@ Optimizar el proceso de gestión de reclamos de siniestros de autos automatizand
 
 ## 3. Riesgos de Negocio y Técnicos
 
-> **Nota:** Esta sección fue liderada por **QA (Jean Pierre)** con visión preventiva de los posibles puntos de fallo del sistema.
-
-### 3.1 Riesgos de Negocio
-
 ## 3.1 Riesgos de Negocio
 
 A continuación se describen los principales riesgos identificados para el MVP, junto con cómo se planea manejarlos.
@@ -100,8 +96,18 @@ Al tratarse de una primera versión, las reglas son básicas y podrían no detec
 **Cómo se maneja:**  
 Se mantendrán criterios altos para la aprobación automática y cualquier caso dudoso será enviado a revisión manual. Además, se podrán ir agregando reglas con el tiempo, para prevenir inconvenientes.
 
+---
 
-### 3.2 Riesgos Técnicos
+**R004 – Aprobaciones automáticas que generen pérdida económica**  
+Si las reglas de bajo riesgo están mal calibradas, el sistema podría aprobar reclamos que en la práctica deberían haber sido revisados por un gestor, generando pagos indebidos acumulados que impacten financieramente a la aseguradora.
+
+**Cómo se maneja:**  
+Durante las primeras semanas de operación se realizará un muestreo manual de los casos aprobados automáticamente para comparar la decisión del sistema contra el criterio de un gestor . Si se detectan incosistencias se debe realizar ajustes.
+ 
+ 
+---
+ 
+
 ## 3.2 Riesgos Técnicos
 
 A continuación se describen algunos riesgos técnicos identificados en el sistema y cómo se planea manejarlos.
@@ -130,3 +136,12 @@ El sistema toma decisiones basadas en la información que ingresa el usuario. Si
 **Cómo se maneja:**  
 Se aplicarán validaciones en los campos obligatorios y se solicitará evidencia (como fotografías) para respaldar la información del reclamo.
 
+---
+ 
+**T005 – Vulnerabilidad en el acceso a datos sensibles**  
+El sistema maneja información personal de los asegurados  e información financiera. Si no se implementan controles de acceso adecuados, esta información podría quedar expuesta a usuarios no autorizados.
+ 
+**Cómo se maneja:**  
+Se implementará autenticación y autorización basada en roles (asegurado, gestor) desde el MVP. Los endpoints de la API serán protegidos para que cada rol acceda únicamente a la información que le corresponde. Las contraseñas se almacenarán con hashing seguro y se utilizará HTTPS para toda la comunicación.
+
+---
