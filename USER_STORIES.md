@@ -301,7 +301,7 @@ Y no se crea ningún registro de vehículo
 Dado que soy un gestor autenticado en el sistema
 Y existen vehículos registrados en el sistema
 Cuando consulto la lista de vehículos
-Entonces visualizo un listado con la información de identificación básica de cada vehículo
+Entonces visualizo un listado que muestra marca, modelo, año y placa de cada vehículo
 ```
 
 #### Escenario 2: Consulta de un vehículo existente
@@ -309,7 +309,7 @@ Entonces visualizo un listado con la información de identificación básica de 
 Dado que soy un gestor autenticado en el sistema
 Y existe un vehículo registrado en el sistema
 Cuando consulto el detalle de ese vehículo
-Entonces visualizo toda la información disponible para ese vehículo
+Entonces visualizo marca, modelo, año, placa, chasis y motor del vehículo
 ```
 
 #### Escenario 3: Consulta de un vehículo no existente
