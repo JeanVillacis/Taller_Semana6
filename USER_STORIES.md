@@ -424,6 +424,45 @@ Entonces el reclamo se escala a revisión manual
 Y se registra la bandera correspondiente al monto elevado respecto al valor asegurado
 ```
 
+## HU-010: Evaluación de reclamo por historial de siniestros
+
+**Como** sistema de evaluación de siniestros,  
+**Quiero** evaluar el historial de siniestros recientes del asegurado para los reclamos que pasaron la validación de monto,  
+**Para** aprobar automáticamente los reclamos sin indicadores de riesgo por historial y escalar los que presenten frecuencia elevada.
+
+**Prioridad:** Alta  
+**Story Points:** 3
+
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Aprobación automática sin banderas de historial
+```gherkin
+Dado que existe un reclamo que pasó la evaluación de monto sin banderas
+Y el asegurado tiene 0 siniestros registrados en los últimos 12 meses
+Cuando el motor de reglas evalúa el historial del asegurado
+Entonces el reclamo queda aprobado automáticamente
+Y se registra el monto aprobado y el deducible aplicado
+```
+
+#### Escenario 2: Escalamiento por historial de siniestros recientes
+```gherkin
+Dado que existe un reclamo que pasó la evaluación de monto sin banderas
+Y el asegurado tiene 2 o más siniestros registrados en los últimos 12 meses
+Cuando el motor de reglas evalúa el historial del asegurado
+Entonces el reclamo se escala a revisión manual
+Y se registra la bandera correspondiente al historial de siniestros recientes
+```
+
+#### Escenario 3: Escalamiento por múltiples banderas activas simultáneas
+```gherkin
+Dado que existe un reclamo elegible para evaluación
+Y el reclamo activa más de una bandera de escalamiento (monto e historial)
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo se escala a revisión manual
+Y se registran todas las banderas activas que motivaron el escalamiento
+```
+
 ## Historias Técnicas y de Arquitectura
 
 
