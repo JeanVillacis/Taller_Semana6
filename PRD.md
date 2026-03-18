@@ -154,3 +154,16 @@ Se implementará autenticación y autorización basada en roles (asegurado, gest
 | R003 | Detección limitada de fraude | Media | Alto | **Alta** | Umbrales conservadores para aprobación automática. Casos dudosos se escalan a revisión manual. |
 | R004 | Aprobaciones que generen pérdida económica | Media | Crítico | **Crítica** | Muestreo manual en las primeras semanas. Ajuste de umbrales si se detectan inconsistencias. |
 
+---
+
+## 3.4 Matriz de Riesgos Técnicos
+ 
+| ID | Riesgo | Probabilidad | Impacto | Prioridad | Estrategia de mitigación |
+|----|--------|:------------:|:-------:|:---------:|--------------------------|
+| T001 | Motor de reglas difícil de mantener | Media | Alto | **Alta** | Diseño desacoplado y configurable. Evitar lógica hardcodeada en el código fuente. |
+| T002 | Errores en condiciones límite | Alta | Alto | **Crítica** | Pruebas unitarias específicas para valores en los umbrales exactos y en sus bordes inmediatos. |
+| T004 | Datos incorrectos ingresados por el usuario | Alta | Medio | **Alta** | Validaciones en campos obligatorios. Evidencia fotográfica como respaldo del reclamo. |
+| T005 | Vulnerabilidad en datos sensibles | Media | Crítico | **Crítica** | Autenticación por roles, HTTPS obligatorio, hashing de contraseñas, endpoints protegidos por rol. |
+ 
+
+
