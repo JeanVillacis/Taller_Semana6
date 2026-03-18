@@ -107,3 +107,45 @@
 | --- | --- |
  
 ---
+
+## HU-003 – Registrar Vehículo
+`Story Points: 3`
+ 
+**Justificación SP:** Parecido a HU-001, validaciones múltiples y manejo de varios escenarios de error.
+ 
+### DEV
+| # | Tarea |
+|---|-------|
+| 1 | Crear entidad JPA `Vehiculo` con atributos (marca, modelo, anio, placa) |
+| 2 | Implementar repositorio `VehiculoRepository` con validación de unicidad de placa |
+| 3 | Crear DTO `VehiculoRequestDTO` y `VehiculoResponseDTO` |
+| 4 | Implementar validaciones: campos obligatorios, formato de placa, año numérico positivo |
+| 5 | Implementar `POST /api/v1/vehiculos` con respuesta HTTP 201 para creaciones exitosas |
+| 6 | Manejar excepción de placa duplicada |
+ 
+### QA
+| # | Tarea |
+|---|-------|
+| --- | --- |
+ 
+---
+
+## HU-004 – Consultar Vehículos
+`Story Points: 2`
+ 
+**Justificación SP:** Solo lectura con dos endpoints simples y manejo de un único caso de error.
+ 
+### DEV
+| # | Tarea |
+|---|-------|
+| 1 | Implementar `GET /api/v1/vehiculos` que retorna lista con información básica de cada vehículo |
+| 2 | Implementar `GET /api/v1/vehiculos/{id}` que retorna el detalle completo del vehículo |
+| 3 | Manejar excepción cuando el vehículo no existe |
+ 
+### QA
+| # | Tarea |
+|---|-------|
+| --- | --- |
+ 
+ 
+---
