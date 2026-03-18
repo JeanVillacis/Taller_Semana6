@@ -760,7 +760,15 @@ Cuando el sistema ejecuta la validación de elegibilidad de la póliza
 Entonces el reclamo "REC-2026-003" cambia al estado "EN REVISIÓN MANUAL"
 Y se registra la bandera "Antigüedad de póliza insuficiente (menor a 30 días)"
 ```
-
+#### CP004-HU-008: Póliza elegible con antigüedad mayor a 30 días
+```gherkin
+Dado que existe un reclamo registrado con número de seguimiento "REC-2026-005"
+Y la póliza asociada "POL-2026-001" está activa con fecha de inicio de vigencia "01/01/2026"
+Y la fecha del reclamo es "17/03/2026" 
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo "REC-2026-005" queda habilitado para continuar con la evaluación por reglas de negocio
+Y no se registra ninguna bandera ni motivo de rechazo
+```
 ## HU-009: Evaluación de reclamo por reglas de deducible y monto
 
 **Como** sistema de evaluación de siniestros,  
