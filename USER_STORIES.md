@@ -489,6 +489,18 @@ Entonces el sistema me informa que no se encontró ninguna póliza con ese crite
 Y no se muestra información de la poliza.
 ```
 
+### Casos de Prueba
+
+#### CP001-HU-006: Visualización del listado de pólizas registradas
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existen las pólizas "POL-2026-001" y "POL-2026-002" registradas
+Cuando busca las pólizas registradas
+Entonces el sistema muestra un listado que contiene las pólizas "POL-2026-001" y "POL-2026-002"
+Y muestra número de póliza, asegurado, estado y fechas de vigencia
+```
+
+
 ## HU-007: Registro de Reclamo de Siniestro
 
 **Como** asegurado con una póliza de auto activa,  
