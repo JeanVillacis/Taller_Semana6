@@ -442,6 +442,16 @@ Y guarda la información
 Entonces el sistema muestra un mensaje de error indicando que el rango de fechas no es válido
 ```
 
+#### CP005-HU-005: Intento de registro con valor asegurado menor o igual a cero
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Cuando ingresa "POL-2026-003" en el campo número de póliza
+Y selecciona un asegurado y un vehículo válidos
+Y ingresa "0" en el campo valor asegurado
+Y ingresa fechas de vigencia válidas
+Y guarda la información
+Entonces el sistema muestra un mensaje de error indicando que el valor asegurado no es válido
+```
 
 ## HU-006: Consultar Pólizas
 
