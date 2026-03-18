@@ -132,6 +132,41 @@ Y me indica qué campo contiene el error y por qué el valor no es válido
 Y no se crea ningún registro nuevo en el sistema
 ```
 
+## HU-004: Consultar Vehículos
+
+**Como** gestor de seguros,  
+**Quiero** consultar la lista de vehículos y ver el detalle de uno específico,  
+**Para** verificar datos antes de asociar una póliza.
+
+**Prioridad:** Alta  
+**Story Points:** 2
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Consulta de listado de vehículos
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existen vehículos registrados en el sistema
+Cuando consulto la lista de vehículos
+Entonces visualizo un listado con la información de identificación básica de cada vehículo
+```
+
+#### Escenario 2: Consulta de un vehículo existente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un vehículo registrado en el sistema
+Cuando consulto el detalle de ese vehículo
+Entonces visualizo toda la información disponible para ese vehículo
+```
+
+#### Escenario 3: Consulta de un vehículo no existente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento consultar el detalle de un vehículo que no existe en el sistema
+Entonces el sistema me informa que no se encontró ningún vehículo con ese criterio
+Y no se muestra información parcial ni de otro vehículo
+```
+
 ## Historias Técnicas y de Arquitectura
 
 
