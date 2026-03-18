@@ -462,6 +462,58 @@ Cuando el motor de reglas evalúa el reclamo
 Entonces el reclamo se escala a revisión manual
 Y se registran todas las banderas activas que motivaron el escalamiento
 ```
+## HU-011: Panel del gestor de seguros
+
+**Como** gestor de seguros,  
+**Quiero** visualizar los reclamos escalados a revisión manual con su información de contexto y registrar mi resolución con justificación,
+**Para** tomar decisiones informadas sobre los casos que requieren criterio humano.
+
+**Prioridad:** Alta  
+**Story Points:** 5
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Visualización del listado de reclamos escalados
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existen reclamos en estado de revisión manual pendientes de resolución
+Cuando accedo al panel de reclamos escalados
+Entonces visualizo un listado con la información de contexto de cada reclamo
+Y puedo identificar las banderas que motivaron el escalamiento de cada uno
+```
+#### Escenario 2: Panel sin reclamos pendientes
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y no existen reclamos en estado de revisión manual pendientes de resolución
+Cuando accedo al panel de reclamos escalados
+Entonces el sistema me informa que no hay reclamos pendientes de revisión
+```
+#### Escenario 3: Aprobación manual de un reclamo con justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando decido aprobar el reclamo y registro mi justificación
+Entonces el reclamo cambia al estado de aprobado por gestor
+Y el sistema registra mi identidad, la fecha y la justificación ingresada
+```
+#### Escenario 4: Rechazo manual de un reclamo con justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando decido rechazar el reclamo y registro mi justificación
+Entonces el reclamo cambia al estado de rechazado por gestor
+Y el sistema registra mi identidad, la fecha y la justificación ingresada
+```
+#### Escenario 5: Intento de resolución sin justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando intento aprobar o rechazar el reclamo sin ingresar una justificación
+Entonces el sistema rechaza la operación
+Y me indica que la justificación es obligatoria para registrar una resolución
+Y el estado del reclamo permanece sin cambios
+```
+
 
 ## Historias Técnicas y de Arquitectura
 
