@@ -638,7 +638,7 @@ Y deja vacío el campo descripción
 Y ingresa "3500.00" en el campo monto estimado
 Y ingresa "Quito" en el campo ubicación
 Y adjunta el archivo "foto_siniestro.jpg"
-Y hace clic en el botón "Registrar reclamo"
+Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que el campo descripción es obligatorio
 Y no se crea ningún registro de reclamo
 ```
@@ -652,7 +652,7 @@ Y ingresa "Colisión leve" en el campo descripción
 Y ingresa "0" en el campo monto estimado
 Y ingresa "Quito" en el campo ubicación
 Y adjunta el archivo "foto_siniestro.jpg"
-Y hace clic en el botón "Registrar reclamo"
+Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que el monto estimado debe ser un valor positivo
 Y no se crea ningún registro de reclamo
 ```
@@ -666,7 +666,7 @@ Cuando selecciona la póliza "POL-2026-001"
 Y ingresa "25/12/2026" en el campo fecha del incidente
 Y completa el resto de campos con datos válidos
 Y adjunta el archivo "foto_siniestro.jpg"
-Y hace clic en el botón "Registrar reclamo"
+Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que la fecha del incidente no puede ser en el futuro
 Y no se crea ningún registro de reclamo
 ```
@@ -676,8 +676,18 @@ Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando completa todos los campos obligatorios con datos válidos
 Y adjunta el archivo "documento.pdf"
-Y hace clic en el botón "Registrar reclamo"
+Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que solo se permiten fotografías en formato png o jpg
+Y no se crea ningún registro de reclamo
+```
+#### CP006-HU-008: Intento de registro sin adjuntar ninguna fotografía
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene la póliza "POL-2026-001" activa y vigente
+Cuando completa todos los campos obligatorios con datos válidos
+Y no adjunta ninguna fotografía
+Y registro un reclamo
+Entonces el sistema muestra un mensaje de error indicando que es obligatorio adjuntar al menos una fotografía
 Y no se crea ningún registro de reclamo
 ```
 
