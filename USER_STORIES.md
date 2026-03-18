@@ -156,7 +156,7 @@ Y no se muestra información parcial ni de otro asegurado
 
 ### Casos de Prueba
 
-#### CP002-HU-002: Visualización del listado con asegurados registrados
+#### CP001-HU-002: Visualización del listado con asegurados registrados
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existen los asegurados "Juan Pérez" (ID: 1712345678) y "María López" (ID: 1798765432) registrados
@@ -228,6 +228,61 @@ Cuando intento registrar un vehículo con un campo que no cumple el formato espe
 Entonces el sistema rechaza el registro
 Y me indica qué campo contiene el error y por qué el valor no es válido
 Y no se crea ningún registro nuevo en el sistema
+```
+
+### Casos de Prueba
+
+#### CP001-HU-003: Registro exitoso de vehículo con todos los datos válidos
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de vehículos
+Cuando ingresa "Chevrolet" en el campo marca
+Y ingresa "Aveo" en el campo modelo
+Y ingresa "2022" en el campo año
+Y ingresa "PBA-1234" en el campo placa
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de confirmación "Vehículo registrado exitosamente"
+Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" aparece en el listado de vehículos
+```
+
+#### CP002-HU-003: Intento de registro sin completar el campo marca
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de vehículos
+Cuando deja vacío el campo marca
+Y ingresa "Aveo" en el campo modelo
+Y ingresa "2022" en el campo año
+Y ingresa "PBA-1235" en el campo placa
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que el campo marca es obligatorio
+Y no se crea ningún registro de vehículo
+```
+
+#### CP003-HU-003: Intento de registro con placa ya existente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe un vehículo registrado con placa "PBA-1234"
+Y se encuentra en la pantalla de registro de vehículos
+Cuando ingresa "Kia" en el campo marca
+Y ingresa "Rio" en el campo modelo
+Y ingresa "2023" en el campo año
+Y ingresa "PBA-1234" en el campo placa
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que ya existe un vehículo con la placa "PBA-1234"
+Y no se crea ningún registro nuevo
+```
+
+#### CP004-HU-003: Intento de registro con año en formato inválido
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y se encuentra en la pantalla de registro de vehículos
+Cuando ingresa "Chevrolet" en el campo marca
+Y ingresa "Aveo" en el campo modelo
+Y ingresa "veintidos" en el campo año
+Y ingresa "PBA-1236" en el campo placa
+Y hace clic en el botón "Guardar"
+Entonces el sistema muestra un mensaje de error indicando que el campo año debe ser un valor numérico válido
+Y no se crea ningún registro de vehículo
 ```
 
 ## HU-004: Consultar Vehículos
