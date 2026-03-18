@@ -820,7 +820,16 @@ Y la póliza asociada tiene un valor asegurado de $25,000.00
 Y el deducible calculado es $250.00 
 Cuando el motor de reglas evalúa el reclamo
 Entonces el reclamo queda en estado "DESCARTADO"
-Y el motivo registrado indica que el monto no supera el deducible aplicable de $250.00
+Y el motivo registrado indica que el monto no supera el deducible aplicado de $250.00
+```
+#### CP002-HU-009: Descarte por monto igual al deducible calculado
+```gherkin
+Dado que existe un reclamo elegible con monto estimado de $250.00
+Y la póliza asociada tiene un valor asegurado de $25,000.00
+Y el deducible calculado es $250.00 
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo queda en estado "DESCARTADO"
+Y el motivo registrado indica que el monto no supera el deducible aplicado de $250.00
 ```
 
 
