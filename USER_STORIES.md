@@ -642,8 +642,21 @@ Y hace clic en el botón "Registrar reclamo"
 Entonces el sistema muestra un mensaje de error indicando que el campo descripción es obligatorio
 Y no se crea ningún registro de reclamo
 ```
-
-
+#### CP004-HU-007: Intento de registro con monto estimado igual a cero
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene la póliza "POL-2026-001" activa y vigente
+Y se encuentra en la pantalla de registro de reclamo
+Cuando selecciona la póliza "POL-2026-001"
+Y ingresa "15/03/2026" en el campo fecha del incidente
+Y ingresa "Colisión leve" en el campo descripción
+Y ingresa "0" en el campo monto estimado
+Y ingresa "Quito" en el campo ubicación
+Y adjunta el archivo "foto_siniestro.jpg"
+Y hace clic en el botón "Registrar reclamo"
+Entonces el sistema muestra un mensaje de error indicando que el monto estimado debe ser un valor positivo
+Y no se crea ningún registro de reclamo
+```
 
 ## HU-008: Validación de póliza para procesamiento de reclamo
 
