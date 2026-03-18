@@ -420,6 +420,16 @@ Cuando intenta asociar la póliza a un vehículo que no existe en el sistema
 Entonces el sistema muestra un mensaje de error indicando que el vehículo indicado no se encuentra registrado
 ```
 
+#### CP003-HU-005: Intento de registro con número de póliza duplicado
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe la póliza "POL-2026-001" registrada en el sistema
+Cuando ingresa "POL-2026-001" en el campo número de póliza
+Y completa el resto de campos con datos válidos
+Y desea guardar la información
+Entonces el sistema muestra un mensaje de error indicando que ya existe una póliza con el número "POL-2026-001"
+```
+
 
 ## HU-006: Consultar Pólizas
 
