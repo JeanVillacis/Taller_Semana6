@@ -86,3 +86,24 @@
 | # | Tarea |
 |---|-------|
 | --- | --- |
+
+---
+
+## HU-002 – Consultar Asegurados
+`Story Points: 2`
+ 
+**Justificación SP:** Solo lectura con dos endpoints simples y manejo de un único caso de error.
+ 
+### DEV
+| # | Tarea |
+|---|-------|
+| 1 | Implementar `GET /api/v1/asegurados` que retorna lista con información básica de cada asegurado |
+| 2 | Implementar `GET /api/v1/asegurados/{id}` que retorna el detalle completo del asegurado |
+| 3 | Manejar excepción cuando el asegurado no existe |
+ 
+### QA
+| # | Tarea |
+|---|-------|
+| --- | --- |
+ 
+---
