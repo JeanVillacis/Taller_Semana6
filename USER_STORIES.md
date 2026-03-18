@@ -217,7 +217,41 @@ Entonces el sistema rechaza el registro
 Y me indica que el rango de vigencia no es válido
 Y no se crea ningún registro de póliza en el sistema
 ```
+## HU-006: Consultar Pólizas
 
+**Como** gestor de seguros,  
+**Quiero** consultar pólizas registradas y ver el detalle de una específica,  
+**Para** verificar estado, vigencia y vehículo asociado.
+
+**Prioridad:** Alta  
+**Story Points:** 2
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Consulta de listado
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existen pólizas registradas en el sistema
+Cuando consulto la lista de pólizas
+Entonces visualizo un listado con la información de identificación básica de cada póliza
+```
+
+#### Escenario 2: Consulta del detalle de una póliza existente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe una póliza registrada en el sistema
+Cuando consulto el detalle de esa póliza
+Entonces visualizo toda la información disponible para esa póliza
+Y puedo identificar el vehículo y el asegurado vinculados a ella
+```
+
+#### Escenario 3: Consulta de una póliza no existente
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Cuando intento consultar el detalle de una póliza que no existe en el sistema
+Entonces el sistema me informa que no se encontró ninguna póliza con ese criterio
+Y no se muestra información de la poliza.
+```
 
 ## Historias Técnicas y de Arquitectura
 
