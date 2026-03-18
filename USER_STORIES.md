@@ -154,6 +154,33 @@ Entonces el sistema me informa que no se encontró ningún asegurado con ese cri
 Y no se muestra información parcial ni de otro asegurado
 ```
 
+### Casos de Prueba
+
+#### CP002-HU-002: Visualización del listado con asegurados registrados
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existen los asegurados "Juan Pérez" (ID: 1712345678) y "María López" (ID: 1798765432) registrados
+Cuando hace clic en la opción "Asegurados" del menú principal
+Entonces el sistema muestra un listado que contiene al menos a "Juan Pérez" y "María López"
+Y cada fila muestra nombre, apellido e identificación del asegurado
+```
+
+#### CP002-HU-002: Consulta del detalle de un asegurado existente
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y existe el asegurado "Juan Pérez" con identificación "1712345678"
+Cuando busque al asegurado con identificación "1712345678"
+Entonces el sistema muestra el detalle con nombre "Juan", apellido "Pérez", identificación "1712345678", dirección, teléfono y correo electrónico
+```
+
+#### CP003-HU-002: Intento de consulta de un asegurado que no existe
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Cuando intenta buscar un asegurado con identificación "0000000000" que no existe en el sistema
+Entonces el sistema muestra un mensaje indicando que no se encontró ningún asegurado
+```
+
+
 ## HU-003: Registrar Vehículo
 
 **Como** gestor de seguros,  
