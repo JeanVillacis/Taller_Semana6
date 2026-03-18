@@ -731,6 +731,18 @@ Cuando el sistema ejecuta la validación de elegibilidad de la póliza
 Entonces el reclamo queda habilitado para continuar con la evaluación por reglas de la poliza
 Y no se registra ninguna bandera ni motivo de rechazo en esta fase
 ```
+
+### Casos de Prueba
+
+#### CP001-HU-008: Rechazo automático por póliza con estado inactivo
+```gherkin
+Dado que existe un reclamo registrado con número de seguimiento "REC-2026-001"
+Y la póliza asociada "POL-2025-050" tiene estado "INACTIVA"
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo "REC-2026-001" cambia al estado "RECHAZADO"
+Y el motivo registrado indica "Póliza no vigente"
+```
+
 ## HU-009: Evaluación de reclamo por reglas de deducible y monto
 
 **Como** sistema de evaluación de siniestros,  
