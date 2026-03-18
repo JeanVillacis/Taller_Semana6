@@ -143,7 +143,7 @@ Entonces visualizo un listado que muestra nombre, apellido e identificación de 
 Dado que soy un gestor autenticado en el sistema
 Y existe un asegurado registrado en el sistema
 Cuando consulto el detalle de ese asegurado
-Entonces visualizo toda la información disponible para ese asegurado
+Entonces visualizo nombre, apellido, identificación, dirección, teléfono y correo electrónico del asegurado
 ```
 
 #### Escenario 3: Consulta de un asegurado inexistente
