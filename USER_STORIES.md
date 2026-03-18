@@ -342,6 +342,46 @@ Entonces el sistema rechaza el registro
 Y me indica que es obligatorio adjuntar al menos una fotografía como evidencia del siniestro
 Y no se crea ningún registro de reclamo en el sistema
 ```
+## HU-008: Validación de póliza para procesamiento de reclamo
+
+**Como** sistema de evaluación de siniestros,  
+**Quiero** validar automáticamente la elegibilidad de la póliza al momento de procesar un reclamo,  
+**Para** descartar de inmediato los reclamos que no cumplen con las condiciones de la poliza
+
+**Prioridad:** Alta  
+**Story Points:** 5
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Rechazo por póliza no vigente
+```gherkin
+Dado que existe un reclamo registrado en el sistema
+Y la póliza asociada a ese reclamo no está activa ni vigente
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo queda en estado de rechazo
+Y se registra el motivo correspondiente a póliza no vigente
+Y no se continúa con ninguna evaluación adicional sobre ese reclamo
+```
+
+#### Escenario 2: Escalamiento por antigüedad insuficiente de la póliza
+```gherkin
+Dado que existe un reclamo registrado en el sistema
+Y la póliza asociada está activa y vigente
+Y la póliza tiene una antigüedad menor a 30 días desde su fecha de inicio de vigencia
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo se escala a revisión manual
+Y se registra la bandera correspondiente a antigüedad insuficiente (menor a 30 días)
+Y no se continúa con la evaluación por reglas de monto e historial
+```
+
+#### Escenario 3: Póliza elegible — Continúa a evaluación por reglas
+```gherkin
+Dado que existe un reclamo registrado en el sistema
+Y la póliza asociada está activa, vigente y con antigüedad igual o mayor a 30 días
+Cuando el sistema ejecuta la validación de elegibilidad de la póliza
+Entonces el reclamo queda habilitado para continuar con la evaluación por reglas de la poliza
+Y no se registra ninguna bandera ni motivo de rechazo en esta fase
+```
 
 ## Historias Técnicas y de Arquitectura
 
