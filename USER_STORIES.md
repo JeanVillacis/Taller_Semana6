@@ -513,6 +513,49 @@ Entonces el sistema rechaza la operación
 Y me indica que la justificación es obligatoria para registrar una resolución
 Y el estado del reclamo permanece sin cambios
 ```
+## HU-012: Consulta de estado de reclamo por el asegurado
+
+**Como** asegurado,  
+**Quiero** consultar el estado actual de mi reclamo y conocer el motivo de la decisión tomada,
+**Para** tener visibilidad del proceso sin necesidad de contactar a la aseguradora.
+
+**Prioridad:** Media  
+**Story Points:** 3
+
+### Criterios de Aceptación (Gherkin)
+
+#### Escenario 1: Consulta de reclamo aprobado automáticamente
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo un reclamo que fue aprobado automáticamente
+Cuando consulto el estado de ese reclamo
+Entonces visualizo la información correspondiente al estado de aprobación
+Y puedo identificar el monto
+```
+#### Escenario 2: Consulta de reclamo en revisión manual
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo un reclamo que se encuentra en revisión manual
+Cuando consulto el estado de ese reclamo
+Entonces visualizo que el reclamo está siendo revisado
+Y se me indica un mensaje de que esta en revisión manual
+```
+#### Escenario 3: Consulta de reclamo descartado
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo un reclamo que fue descartado
+Cuando consulto el estado de ese reclamo
+Entonces visualizo que el reclamo no procede
+Y se me muestra el motivo por el que fue descartado
+```
+#### Escenario 4: Consulta de reclamo rechazado por gestor
+```gherkin
+Dado que soy un asegurado autenticado en el sistema
+Y tengo un reclamo que fue rechazado por un gestor
+Cuando consulto el estado de ese reclamo
+Entonces visualizo que el reclamo fue rechazado
+Y se me muestra el motivo registrado por el gestor
+```
 
 
 ## Historias Técnicas y de Arquitectura
