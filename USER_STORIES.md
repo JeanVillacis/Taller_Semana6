@@ -443,8 +443,7 @@ CRUD completo en `/api/v1/asegurados`, `/api/v1/vehiculos` y `/api/v1/polizas`
 Reclamos:
 - `POST /api/v1/reclamos` — registrar reclamo
 - `GET /api/v1/reclamos/{numeroSeguimiento}/estado` — consultar estado
-- `POST /api/v1/reclamos/{numeroSeguimiento}/resolucion` — aprobar o rechazar con justificación
-- `PUT /api/v1/reclamos/{numeroSeguimiento}/estado` — actualizar estado del reclamo
+- `PUT /api/v1/reclamos/{numeroSeguimiento}/resolucion` — aprobar o rechazar con justificación
 
 **Criterios de Aceptación**
 
@@ -465,7 +464,6 @@ Reclamos:
 **Roles:**
 - `GESTOR` — acceso completo a vehículos, pólizas, asegurados y resolución de reclamos
 - `ASEGURADO` — solo puede registrar y consultar sus propios reclamos
-- `ADMIN` — acceso total incluyendo configuración del sistema
 
 **Criterios de Aceptación**
 
