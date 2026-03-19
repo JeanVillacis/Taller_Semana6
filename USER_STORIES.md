@@ -797,7 +797,7 @@ Dado que existe un reclamo elegible para evaluación
 Y el monto estimado supera el deducible calculado
 Y el monto estimado es menor al 20% del valor asegurado
 Cuando el motor de reglas evalúa el reclamo
-Entonces el reclamo continúa a la evaluación por historial de siniestros (HU-010)
+Entonces el reclamo queda habilitado para continuar con la siguiente fase de evaluación
 Y no se registra ninguna bandera de escalamiento por monto
 ```
 
