@@ -251,3 +251,4 @@
 |---|-------|----------|
 | 1 | Preparar datos de prueba con reclamos escalados creando múltiples reclamos en estado de revisión manual | Medio |
 | 2 | Escribir tests de integración del endpoint de listado verificando que el endpoint devuelva correctamente los reclamos  | Medio |
+| 3 | Ejecutar pruebas exploratorias del panel navegando manualmente por el panel verificando que todos los datos se muestren correctamente | Medio |
