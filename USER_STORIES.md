@@ -1056,6 +1056,14 @@ Cuando consulta el estado del reclamo "REC-2026-008"
 Entonces el sistema muestra el estado "DESCARTADO"
 Y se muestra el motivo "El monto no supera el deducible"
 ```
+#### CP004-HU-013: Consulta de reclamo rechazado por gestor con justificación
+```gherkin
+Dado que el asegurado "María López" ha iniciado sesión en el sistema
+Y tiene el reclamo "REC-2026-007" que fue rechazado por el gestor "Ana García" con justificación "Las fotografías no corresponden con la descripción del siniestro reportado."
+Cuando consulta el estado del reclamo "REC-2026-007"
+Entonces el sistema muestra el estado "RECHAZADO POR GESTOR"
+Y se muestra el motivo "Las fotografías no corresponden con la descripción del siniestro reportado."
+```
 ## Historias Técnicas y de Arquitectura
 
 
