@@ -923,7 +923,14 @@ Cuando decido aprobar el reclamo y registro mi justificación
 Entonces el reclamo cambia al estado de aprobado por gestor
 Y el sistema registra la fecha y la justificación ingresada
 ```
-
+#### Escenario 2: Rechazo manual de un reclamo con justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando decido rechazar el reclamo y registro mi justificación
+Entonces el reclamo cambia al estado de rechazado por gestor
+Y el sistema registra la fecha y la justificación ingresada
+```
 
 ## HU-013: Consulta de estado de reclamo por el asegurado
 
