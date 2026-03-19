@@ -152,4 +152,4 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Preparar datos de prueba creando vehículos de diferentes marcas y años para validar| Bajo |
- 
+| 2 | Escribir tests de integración verificando que ambos endpoints devuelvan los datos correctos y en el formato esperado | Medio |
