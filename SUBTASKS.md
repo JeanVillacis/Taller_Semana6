@@ -162,6 +162,7 @@
 ### DEV
 
 ### QA
+**Justificación SP:** Para rol QA se concentra en probar todas las combinaciones de validaciones y relaciones, requiriendo tests de integración complejos.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con números duplicados, asegurados, vehículos , rangos de fechas validos e inválidos, valores asegurados negativos o cero | Medio |
