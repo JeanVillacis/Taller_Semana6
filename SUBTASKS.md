@@ -90,7 +90,7 @@
 | 2| Escribir tests unitarios del servicio de negocio para verificar que las validaciones de unicidad y formato| Medio |
 |3 | Crear tests de integración para el endpoint POST para probar el flujo completo desde el controller, validando respuestas HTTP y estructura de errores | Alto |
 |4 | Ejecutar pruebas exploratorias sobre el registro utilizando pruebas automatizadas| Medio |
-
+| 5 | Documentar hallazgos y casos de prueba ejecutados, registrando resultados obtenidos | Bajo |
 ## HU-002 – Consultar Asegurados
 `Story Points: 2`
  
