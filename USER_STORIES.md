@@ -670,7 +670,7 @@ Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que la fecha del incidente no puede ser en el futuro
 Y no se crea ningún registro de reclamo
 ```
-#### CP005-HU-008: Intento de registro con archivo en formato PDF
+#### CP006-HU-007: Intento de registro con archivo en formato PDF
 ```gherkin
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
@@ -680,7 +680,7 @@ Y registro un reclamo
 Entonces el sistema muestra un mensaje de error indicando que solo se permiten fotografías en formato png o jpg
 Y no se crea ningún registro de reclamo
 ```
-#### CP006-HU-008: Intento de registro sin adjuntar ninguna fotografía
+#### CP008-HU-007: Intento de registro sin adjuntar ninguna fotografía
 ```gherkin
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
@@ -930,6 +930,15 @@ Y existe un reclamo en estado de revisión manual
 Cuando decido rechazar el reclamo y registro mi justificación
 Entonces el reclamo cambia al estado de rechazado por gestor
 Y el sistema registra la fecha y la justificación ingresada
+```
+#### Escenario 3: Intento de resolución sin justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando intento aprobar o rechazar el reclamo sin ingresar una justificación
+Entonces el sistema rechaza la operación
+Y me indica que la justificación es obligatoria para registrar una resolución
+Y el estado del reclamo permanece sin cambios
 ```
 
 ## HU-013: Consulta de estado de reclamo por el asegurado
