@@ -20,7 +20,7 @@
 |---|-------|
 | --- | --- |
 
----
+
 
 ## HT-002 – Diseño de la Base de Datos
 `Story Points: 3`
@@ -41,7 +41,7 @@
 |---|-------|
 | --- | --- |
 
----
+
 
 ## HT-003 – Seguridad y Control de Acceso
 `Story Points: 5`
@@ -63,7 +63,7 @@
 |---|-------|
 | --- | --- |
 
----
+
 
 # Historias de Usuario
 
@@ -153,5 +153,3 @@
 |---|-------|
 | --- | --- |
  
- 
----
