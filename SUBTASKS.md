@@ -222,3 +222,4 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para el cálculo del deducible preparando escenarios con diferentes tipos de condiciones| Medio |
+|2 | Crear tests unitarios del cálculo del deducible verificando con diferentes combinaciones  | Medio |
