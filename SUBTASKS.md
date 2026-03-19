@@ -223,3 +223,5 @@
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para el cálculo del deducible preparando escenarios con diferentes tipos de condiciones| Medio |
 |2 | Crear tests unitarios del cálculo del deducible verificando con diferentes combinaciones  | Medio |
+| 3 | Escribir tests para la regla de descarte probando casos donde el monto es menor, igual o mayor al deducible | Medio |
+| 4 | Escribir tests para la regla de monto elevado probando casos diferentes de montos | Medio |
