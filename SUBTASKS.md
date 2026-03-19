@@ -206,6 +206,7 @@
 `Story Points: 5`
 ### DEV
 ### QA
+**Justificación SP:** Para rol QA el esfuerzo  es alto porque requiere probar cada regla de forma aislada y en combinación de validar la póliza.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para cada regla preparando datos con pólizas inactivas, vencidas, con antigüedad definidas en las reglas de las polizas | Medio |
