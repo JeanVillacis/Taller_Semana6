@@ -247,3 +247,7 @@
 ### DEV
 ### QA
 **Justificación SP:** 
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Preparar datos de prueba con reclamos escalados creando múltiples reclamos en estado de revisión manual | Medio |
+| 2 | Escribir tests de integración del endpoint de listado verificando que el endpoint devuelva correctamente los reclamos  | Medio |
