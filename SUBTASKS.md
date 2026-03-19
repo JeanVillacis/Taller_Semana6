@@ -239,5 +239,36 @@
 
 ##  HU-010: Evaluación de reclamo por historial de siniestros 
 `Story Points: 3`
+
 ### DEV
 ### QA
+**Justificación SP:** Para rol QA se enfoca en probar combinaciones de historial y verificar el flujo end-to-end desde el registro hasta la aprobación. 
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar casos de prueba para historial preparando escenarios diferentes| Medio |
+| 2 | Escribir tests unitarios de la consulta de historial verificando que el conteo de siniestros en rango de fechas | Medio |
+| 3 | Crear tests para la regla de historial sin siniestros y aprovación | Medio |
+| 4 | Crear tests para la regla de historial con banderas de siniestros| Medio |
+| 5 | Validar el flujo completo de aprobación automática verificando que un reclamo que pasa todas las reglas  | Alto |
+##  HU-011: Panel del gestor de seguros
+`Story Points: 3`
+
+### DEV
+### QA
+**Justificación SP:** El esfuerzo del rol QA se concentra en validar la autorizacióny la integridad de los datos complejos. .
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Preparar datos de prueba con reclamos escalados creando múltiples reclamos en estado de revisión manual | Medio |
+| 2 | Escribir tests de integración del endpoint de listado verificando que el endpoint devuelva correctamente los reclamos  | Medio |
+| 3 | Ejecutar pruebas exploratorias del panel navegando manualmente por el panel verificando que todos los datos se muestren correctamente | Medio |
+##  HU-012: Resolución de reclamo escalado por el gestor
+`Story Points: 3`
+
+### DEV
+### QA
+**Justificación SP:**
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1| Diseñar casos de prueba para aprobación y rechazo preparando para cada escenario | Medio |
+| 2 | Escribir tests de validación de justificación verificando que el sistema rechace dependiendo la justificación | Medio |
+| 3 | Crear tests de integración del endpoint probando el flujo completo | Alto |
