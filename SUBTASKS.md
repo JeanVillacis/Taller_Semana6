@@ -236,3 +236,6 @@
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para historial preparando escenarios diferentes| Medio |
 | 2 | Escribir tests unitarios de la consulta de historial verificando que el conteo de siniestros en rango de fechas | Medio |
+| 3 | Crear tests para la regla de historial sin siniestros y aprovación | Medio |
+| 4 | Crear tests para la regla de historial con banderas de siniestros| Medio |
+| 5 | Validar el flujo completo de aprobación automática verificando que un reclamo que pasa todas las reglas  | Alto |
