@@ -193,3 +193,5 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con pólizas inactivas, fechas futuras, montos cero o negativos, fotografías en formatos incorrectos, sin fotografías | Medio |
+| 2 | Escribir tests unitarios del servicio verificando todas las validaciones y número de seguimiento | Alto |
+| 3 | Crear tests de integración del endpoint probando el flujo completo incluyendo la subida de fotografias | Alto |
