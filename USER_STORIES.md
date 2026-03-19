@@ -1032,13 +1032,21 @@ Y se me muestra el motivo registrado por el gestor
 ```
 ### Casos de Prueba
  
-#### CP001-HU-012: Consulta de reclamo aprobado automáticamente
+#### CP001-HU-013: Consulta de reclamo aprobado automáticamente
 ```gherkin
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene el reclamo "REC-2026-005" que fue aprobado automáticamente con monto aprobado de $3,150.00 y deducible aplicado de $350.00
 Cuando consulta el estado del reclamo "REC-2026-005"
 Entonces el sistema muestra el estado "APROBADO"
 Y se muestra el monto aprobado "$3,150.00" y el deducible aplicado "$350.00"
+```
+#### CP002-HU-013: Consulta de reclamo en revisión manual
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene el reclamo "REC-2026-003" que se encuentra en estado "EN REVISIÓN MANUAL"
+Cuando consulta el estado del reclamo "REC-2026-003"
+Entonces el sistema muestra el estado "EN REVISIÓN MANUAL"
+Y se muestra el mensaje "Su reclamo se encuentra en revisión manual"
 ```
 ## Historias Técnicas y de Arquitectura
 
