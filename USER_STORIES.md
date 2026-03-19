@@ -915,7 +915,15 @@ Cuando accede al panel de reclamos escalados
 Entonces el sistema muestra un listado con los reclamos "REC-2026-003" y "REC-2026-007"
 Y para el reclamo "REC-2026-003" se muestra asegurado "Juan Pérez", monto "$3,500.00", fecha "15/03/2026" y bandera "Antigüedad de póliza insuficiente"
 ```
-
+ 
+#### CP002-HU-011: Panel sin reclamos pendientes de revisión
+```gherkin
+Dado que el gestor ha iniciado sesión en el sistema
+Y no existen reclamos en estado de revisión manual en el sistema
+Cuando accede al panel de reclamos escalados
+Entonces el sistema muestra un mensaje indicando "No hay reclamos pendientes de revisión"
+Y no se muestra ningún listado de reclamos
+```
 
 ## HU-012: Resolución manual de reclamos escalados
 **Como** gestor de seguros,  
