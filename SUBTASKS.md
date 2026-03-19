@@ -178,3 +178,5 @@
 |---|-------|----------|
 | 1 | Preparar datos de prueba creando pólizas con diferentes estados (ACTIVA, INACTIVA) y fechas  para validar consultas | Bajo |
 | 2 | Escribir tests de integración verificando que los endpoints devuelvan correctamente la información de la póliza| Alto |
+| 3 | Validar comportamiento con póliza inexistente, esperando un 404 | Bajo |
+| 4 | Verificar carga de relaciones asegurando que no haya problemas al realizar varias consultas | Medio |
