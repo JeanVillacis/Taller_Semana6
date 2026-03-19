@@ -165,3 +165,5 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con números duplicados, asegurados, vehículos , rangos de fechas validos e inválidos, valores asegurados negativos o cero | Medio |
+| 2 | Escribir tests unitarios del servicio verificando todas las validaciones de negocio  | Medio |
+
