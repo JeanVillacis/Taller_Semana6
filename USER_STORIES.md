@@ -880,6 +880,20 @@ Cuando el motor de reglas evalúa el reclamo
 Entonces el reclamo se escala a revisión manual
 Y se registran todas las banderas activas que motivaron el escalamiento
 ```
+
+### Casos de Prueba
+ 
+#### CP001-HU-010: Aprobación automática con historial limpio (0 siniestros en 12 meses)
+```gherkin
+Dado que existe el reclamo "REC-2026-005" con monto estimado de $3,500.00
+Y la póliza asociada "POL-2026-001" tiene un valor asegurado de $25,000.00
+Y el reclamo pasó la evaluación de monto sin banderas
+Y el asegurado "Juan Pérez" tiene 0 siniestros registrados en los últimos 12 meses
+Cuando el motor de reglas evalúa el historial del asegurado
+Entonces el reclamo "REC-2026-005" cambia al estado "APROBADO AUTOMÁTICAMENTE"
+Y se registra el monto aprobado de $3,150.00
+```
+
 ## HU-011: Panel del gestor de seguros
 
 **Como** gestor de seguros,  
