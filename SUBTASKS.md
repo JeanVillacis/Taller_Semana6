@@ -177,3 +177,4 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Preparar datos de prueba creando pólizas con diferentes estados (ACTIVA, INACTIVA) y fechas  para validar consultas | Bajo |
+| 2 | Escribir tests de integración verificando que los endpoints devuelvan correctamente la información de la póliza| Alto |
