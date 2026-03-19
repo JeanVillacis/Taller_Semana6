@@ -173,6 +173,10 @@
 
 ## HU-006: Consultar Pólizas
 `Story Points: 2`
+### DEV
+
+### QA
+**Justificación SP:** Para rol de QA se enfoca en validar la consultas correctas obteniendo información completa de las polizas.
 
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
