@@ -307,6 +307,15 @@
 `Story Points: 3`
 
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear consulta en el repositorio que filtre reclamos por estado "EN REVISIÓN MANUAL" | Medio |
+| 2 | Implementar service de consulta de reclamos escalados que devuelva el listado con sus banderas e información del asegurado | Alto |
+| 3 | Crear DTO de response con número de seguimiento, datos del asegurado, monto, fecha y banderas activas | Medio |
+| 4 | Exponer `GET /api/v1/reclamos/escalados` protegido con rol GESTOR que devuelva el listado de reclamos en revisión manual | Medio |
+| 5 | Implementar consulta de detalle de reclamo con toda la información: póliza, asegurado, vehículo y fotografías | Alto |
+| 6 | Exponer `GET /api/v1/reclamos/{numeroSeguimiento}/detalle` para que el gestor vea toda la información de un reclamo específico | Medio |
+
 ### QA
 **Justificación SP:** El esfuerzo del rol QA se concentra en validar la autorizacióny la integridad de los datos complejos. .
 | # | Tarea | Esfuerzo |
