@@ -133,6 +133,7 @@
 | 1 | Diseñar matriz de datos de prueba preparando casos con placas duplicadas, años inválidos (texto, negativos, futuros), campos obligatorios faltantes, y formatos de placa incorrectos | Medio |
 | 2 | Escribir tests unitarios del servicio verificando validaciones de placas y formato de datos | Medio |
 | 3 | Crear tests de integración del endpoint POST probando el flujo completo de registro incluyendo validaciones| Medio |
+| 4 | Ejecutar pruebas exploratorias sobre campos de texto con diferentes combinaciones| Medio |
 
 ## HU-004 – Consultar Vehículos
 `Story Points: 2`
