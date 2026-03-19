@@ -104,9 +104,9 @@
 | 3 | Manejar excepción cuando el asegurado no existe |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Generar datos de prueba en la base de datos para validar que el listado y la consulta individual funcionen  | Bajo |
  
 ---
 
