@@ -214,3 +214,11 @@
 | 3 | Crear tests de integración del flujo completo verificando que al registrar un reclamo | Alto |
 | 4 | Validar que se registren las banderas correctamente verificando que cuando un reclamo se escala| Medio |
 | 5 | Probar casos límite de fechas validas al regustrar un reclamo | Medio |
+
+## HU-009: Evaluación de reclamo por reglas de deducible y monto
+`Story Points: 5`
+### DEV
+### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar casos de prueba para el cálculo del deducible preparando escenarios con diferentes tipos de condiciones| Medio |
