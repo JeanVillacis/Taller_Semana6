@@ -232,3 +232,7 @@
 `Story Points: 3`
 ### DEV
 ### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar casos de prueba para historial preparando escenarios diferentes| Medio |
+| 2 | Escribir tests unitarios de la consulta de historial verificando que el conteo de siniestros en rango de fechas | Medio |
