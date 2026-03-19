@@ -187,6 +187,7 @@
 
 ## HU-007: Registro de Reclamo de Siniestro
 `Story Points: 5`
+**Justificación SP:** Para rol QA el esfuerzo es alto porque requiere probar múltiples escenarios de archivos, validar la transaccionalidad y asegurar que no haya casos límite sin cubrir.
 ### DEV
 
 ### QA
