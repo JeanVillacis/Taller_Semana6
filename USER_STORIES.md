@@ -1048,6 +1048,14 @@ Cuando consulta el estado del reclamo "REC-2026-003"
 Entonces el sistema muestra el estado "EN REVISIÓN MANUAL"
 Y se muestra el mensaje "Su reclamo se encuentra en revisión manual"
 ```
+#### CP003-HU-013: Consulta de reclamo descartado por monto inferior al deducible
+```gherkin
+Dado que el asegurado "María López" ha iniciado sesión en el sistema
+Y tiene el reclamo "REC-2026-008" que fue descartado con motivo "El monto no supera el deducible"
+Cuando consulta el estado del reclamo "REC-2026-008"
+Entonces el sistema muestra el estado "DESCARTADO"
+Y se muestra el motivo "El monto no supera el deducible"
+```
 ## Historias Técnicas y de Arquitectura
 
 
