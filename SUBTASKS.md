@@ -273,3 +273,12 @@
 | 2 | Escribir tests de validación de justificación verificando que el sistema rechace dependiendo la justificación | Medio |
 | 3 | Crear tests de integración del endpoint probando el flujo completo | Alto |
 | 4 | Ejecutar pruebas exploratorias de justificaciones probando diferentes textos. | Medio |
+##  HU-013: Consulta de estado de reclamo por el asegurado
+`Story Points: 3`
+
+### DEV
+### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Preparar casos de prueba para cada estado posible creando reclamos en todos los estados| Medio |
+|2| Escribir tests de integración del endpoint verificando que el endpoint devuelva la información según el estado del reclamo | Medio |
