@@ -197,3 +197,5 @@
 | 3 | Crear tests de integración del endpoint probando el flujo completo incluyendo la subida de fotografias | Alto |
 | 4 | Validar almacenamiento de fotografías verificando que las fotografías se guarden correctamente | Medio |
 | 5 | Probar límites de tamaño del tamaño de los archivos de fotografías, validando los posibles casos | Medio |
+| 6 | Realizar pruebas exploratorias de formatos de imagen probando con archivos, con extensión cambiada diferente | Medio |
+| 7 | Validar mensajes de error descriptivos asegurando que cada tipo de error devuelva un mensaje claro  | Medio |
