@@ -87,7 +87,7 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1| Diseñar la matriz de datos de prueba con diferentes combinaciones de datos válidos e inválidos: campos vacíos, identificaciones duplicadas, correos con formato incorrecto, y casos límite en longitudes de campos | Medio |
-
+| 2| Escribir tests unitarios del servicio de negocio para verificar que las validaciones de unicidad y formato| Medio |
 ---
 
 ## HU-002 – Consultar Asegurados
