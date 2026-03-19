@@ -973,6 +973,19 @@ Y confirma la resolución
 Entonces el reclamo "REC-2026-003" cambia al estado "APROBADO POR GESTOR"
 Y el sistema registra el responsable, la fecha "18/03/2026" y la justificación ingresada
 ```
+#### CP002-HU-012: Rechazo de reclamo escalado con justificación
+```gherkin
+Dado que el gestor "Ana García" ha iniciado sesión en el sistema
+Y existe el reclamo "REC-2026-007" en estado "EN REVISIÓN MANUAL" del asegurado "María López"
+Y el reclamo tiene la bandera "Monto elevado respecto al valor asegurado"
+Cuando selecciona el reclamo "REC-2026-007"
+Y selecciona la acción "Rechazar"
+Y ingresa "Las fotografías no corresponden con la descripción." en el campo justificación
+Y confirma la resolución
+Entonces el reclamo "REC-2026-007" cambia al estado "RECHAZADO POR GESTOR"
+Y el sistema registra al gestor , la fecha "18/03/2026" y la justificación ingresada
+```
+
 
 ## HU-013: Consulta de estado de reclamo por el asegurado
 
