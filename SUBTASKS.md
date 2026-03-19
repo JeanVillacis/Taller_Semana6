@@ -262,3 +262,4 @@
 |---|-------|----------|
 | 1| Diseñar casos de prueba para aprobación y rechazo preparando para cada escenario | Medio |
 | 2 | Escribir tests de validación de justificación verificando que el sistema rechace dependiendo la justificación | Medio |
+| 3 | Crear tests de integración del endpoint probando el flujo completo | Alto |
