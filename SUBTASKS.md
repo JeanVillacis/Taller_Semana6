@@ -149,6 +149,8 @@
 | 3 | Manejar excepción cuando el vehículo no existe |
  
 ### QA
+**Justificación SP:** Para rol de QA incluye realizar diferentes tipos de test para verificar que las consultas para buscar vehículos se ejecuten de manera correcta.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Preparar datos de prueba creando vehículos de diferentes marcas y años para validar| Bajo |
