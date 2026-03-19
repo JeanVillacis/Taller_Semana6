@@ -184,3 +184,12 @@
 | 2 | Escribir tests de integración verificando que los endpoints devuelvan correctamente la información de la póliza| Alto |
 | 3 | Validar comportamiento con póliza inexistente, esperando un 404 | Bajo |
 | 4 | Verificar carga de relaciones asegurando que no haya problemas al realizar varias consultas | Medio |
+
+## HU-007: Registro de Reclamo de Siniestro
+`Story Points: 5`
+### DEV
+
+### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar matriz de datos de prueba preparando casos con pólizas inactivas, fechas futuras, montos cero o negativos, fotografías en formatos incorrectos, sin fotografías | Medio |
