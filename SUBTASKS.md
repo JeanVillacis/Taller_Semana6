@@ -258,7 +258,18 @@
 
 ## HU-009: Evaluación de reclamo por reglas de deducible y monto
 `Story Points: 5`
+
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Implementar cálculo del deducible como el mayor entre: 10% del monto del siniestro, 1% del valor asegurado, y $200 | Medio |
+| 2 | Implementar regla de descarte por monto bajo comparando el monto estimado con el deducible y descartando si es menor o igual | Medio |
+| 3 | Implementar regla de monto elevado calculando el 20% del valor asegurado y escalando si el monto es >= a ese umbral | Medio |
+| 4 | Agregar campos de deducible calculado y monto aprobado en la entidad Reclamo | Bajo |
+| 5 | Integrar reglas de monto en el coordinador para que se ejecuten después de validar la póliza | Medio |
+| 6 | Implementar registro del motivo de descarte cuando un reclamo es descartado por monto bajo | Medio |
+| 7 | Asegurar que los cálculos se hagan en memoria sin consultas adicionales innecesarias a la base de datos | Medio |
+
 ### QA
 **Justificación SP:** Para rol QA es alto porque requiere probar  los casos límite y la precisión de los cálculos , especialmente dado que son cálculos financieros. 
 | # | Tarea | Esfuerzo |
