@@ -230,9 +230,10 @@
 
 ##  HU-010: Evaluación de reclamo por historial de siniestros 
 `Story Points: 3`
-**Justificación SP:** Para rol QA se enfoca en probar combinaciones de historial y verificar el flujo end-to-end desde el registro hasta la aprobación. 
+
 ### DEV
 ### QA
+**Justificación SP:** Para rol QA se enfoca en probar combinaciones de historial y verificar el flujo end-to-end desde el registro hasta la aprobación. 
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para historial preparando escenarios diferentes| Medio |
@@ -240,3 +241,9 @@
 | 3 | Crear tests para la regla de historial sin siniestros y aprovación | Medio |
 | 4 | Crear tests para la regla de historial con banderas de siniestros| Medio |
 | 5 | Validar el flujo completo de aprobación automática verificando que un reclamo que pasa todas las reglas  | Alto |
+##  HU-011: Panel del gestor de seguros
+`Story Points: 3`
+
+### DEV
+### QA
+**Justificación SP:** 
