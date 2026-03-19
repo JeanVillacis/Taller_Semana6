@@ -883,11 +883,11 @@ Y se registran todas las banderas activas que motivaron el escalamiento
 ## HU-011: Panel del gestor de seguros
 
 **Como** gestor de seguros,  
-**Quiero** visualizar los reclamos escalados a revisión manual con su información de contexto y registrar mi resolución con justificación,
-**Para** tomar decisiones informadas sobre los casos que requieren criterio humano.
+**Quiero** visualizar los reclamos escalados a revisión manual con sus datos de contexto,
+**Para** identificar rápidamente los casos que requieren mi criterio y las razones del escalamiento.
 
 **Prioridad:** Alta  
-**Story Points:** 5
+**Story Points:** 3
 
 ### Criterios de Aceptación (Gherkin)
 
