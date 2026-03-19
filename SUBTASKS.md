@@ -218,6 +218,7 @@
 `Story Points: 5`
 ### DEV
 ### QA
+**Justificación SP:** Para rol QA es alto porque requiere probar  los casos límite y la precisión de los cálculos , especialmente dado que son cálculos financieros. 
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para el cálculo del deducible preparando escenarios con diferentes tipos de condiciones| Medio |
@@ -225,4 +226,9 @@
 | 3 | Escribir tests para la regla de descarte probando casos donde el monto es menor, igual o mayor al deducible | Medio |
 | 4 | Escribir tests para la regla de monto elevado probando casos diferentes de montos | Medio |
 | 5 | Crear tests de integración del flujo completo verificando que un reclamo pase por todas las validaciones | Alto |
-| 6 | Validar casos límite de montos probando con montos exactamente iguales y variados para evaluar reclams | Medio |
+| 6 | Validar casos límite de montos probando con montos exactamente iguales y variados para evaluar reclamos | Medio |
+
+##  HU-010: Evaluación de reclamo por historial de siniestros 
+`Story Points: 3`
+### DEV
+### QA
