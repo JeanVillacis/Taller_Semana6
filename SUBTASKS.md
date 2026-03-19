@@ -167,3 +167,5 @@
 | 1 | Diseñar matriz de datos de prueba preparando casos con números duplicados, asegurados, vehículos , rangos de fechas validos e inválidos, valores asegurados negativos o cero | Medio |
 | 2 | Escribir tests unitarios del servicio verificando todas las validaciones de negocio  | Medio |
 |3 | Crear tests de integración probando el flujo completo desde el controller, validando las relaciones con asegurado y vehículo | Alto |
+| 4 | Validar cálculo automático del estado verificando que la póliza quede automáticamente en estado ACTIVA posterior al registro | Bajo |
+| 5 | Ejecutar pruebas exploratorias de fechas límite probando fechas en el límite y diferentes variantes de fechas | Medio |
