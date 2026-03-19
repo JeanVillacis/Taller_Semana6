@@ -166,4 +166,4 @@
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con números duplicados, asegurados, vehículos , rangos de fechas validos e inválidos, valores asegurados negativos o cero | Medio |
 | 2 | Escribir tests unitarios del servicio verificando todas las validaciones de negocio  | Medio |
-
+|3 | Crear tests de integración probando el flujo completo desde el controller, validando las relaciones con asegurado y vehículo | Alto |
