@@ -225,3 +225,4 @@
 | 3 | Escribir tests para la regla de descarte probando casos donde el monto es menor, igual o mayor al deducible | Medio |
 | 4 | Escribir tests para la regla de monto elevado probando casos diferentes de montos | Medio |
 | 5 | Crear tests de integración del flujo completo verificando que un reclamo pase por todas las validaciones | Alto |
+| 6 | Validar casos límite de montos probando con montos exactamente iguales y variados para evaluar reclams | Medio |
