@@ -883,7 +883,7 @@ Y se registran todas las banderas activas que motivaron el escalamiento
 ## HU-011: Panel del gestor de seguros
 
 **Como** gestor de seguros,  
-**Quiero** visualizar los reclamos escalados a revisión manual con sus datos de contexto,
+**Quiero** visualizar los reclamos escalados a revisión manual con sus datos registrados,
 **Para** identificar rápidamente los casos que requieren mi criterio y las razones del escalamiento.
 
 **Prioridad:** Alta  
@@ -896,8 +896,7 @@ Y se registran todas las banderas activas que motivaron el escalamiento
 Dado que soy un gestor autenticado en el sistema
 Y existen reclamos en estado de revisión manual pendientes de resolución
 Cuando accedo al panel de reclamos escalados
-Entonces visualizo un listado con la información de contexto de cada reclamo
-Y puedo identificar las banderas que motivaron el escalamiento de cada uno
+Entonces visualizo un listado que muestra número de seguimiento, asegurado, monto estimado, fecha del incidente y banderas de escalamiento de cada reclamo
 ```
 #### Escenario 2: Panel sin reclamos pendientes
 ```gherkin
