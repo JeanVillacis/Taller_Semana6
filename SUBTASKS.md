@@ -170,3 +170,10 @@
 |3 | Crear tests de integración probando el flujo completo desde el controller, validando las relaciones con asegurado y vehículo | Alto |
 | 4 | Validar cálculo automático del estado verificando que la póliza quede automáticamente en estado ACTIVA posterior al registro | Bajo |
 | 5 | Ejecutar pruebas exploratorias de fechas límite probando fechas en el límite y diferentes variantes de fechas | Medio |
+
+## HU-006: Consultar Pólizas
+`Story Points: 2`
+
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Preparar datos de prueba creando pólizas con diferentes estados (ACTIVA, INACTIVA) y fechas  para validar consultas | Bajo |
