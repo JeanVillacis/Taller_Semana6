@@ -158,7 +158,16 @@
 
 ## HU-005: Registrar Póliza de Seguro 
 `Story Points: 3` 
+
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear entidad JPA `Poliza` con atributos (numero, aseguradoId, vehiculoId, valorAsegurado, vigenciaInicio, vigenciaFin, estado) usando anotaciones `@ManyToOne` para las relaciones | Medio |
+| 2 | Implementar repositorio `PolizaRepository` incluyendo método `findByNumero()` para validar unicidad | Bajo |
+| 3 | Crear service `PolizaService` con la lógica de negocio para registrar pólizas: unicidad del número, existencia del asegurado y vehículo, rango de fechas válido y valor asegurado > 0 | Alto |
+| 4 | Crear DTO `PolizaRequestDTO` con validaciones para número, fechas, valor asegurado y referencias a asegurado y vehículo | Medio |
+| 5 | Implementar `POST /api/v1/polizas` en el controller persistiendo la póliza con estado `ACTIVA` | Medio |
+| 6 | Implementar validación de fechas de vigencia validando que fecha_fin > fecha_inicio | Medio |
 
 ### QA
 **Justificación SP:** Para rol QA se concentra en probar todas las combinaciones de validaciones y relaciones, requiriendo tests de integración complejos.
