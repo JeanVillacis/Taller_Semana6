@@ -156,3 +156,12 @@
 | 1 | Preparar datos de prueba creando vehículos de diferentes marcas y años para validar| Bajo |
 | 2 | Escribir tests de integración verificando que ambos endpoints devuelvan los datos correctos y en el formato esperado | Medio |
 | 3 | Validar comportamiento con vehículo inexistente probando que la consulta devuelva 404 | Bajo |
+
+## HU-005: Registrar Póliza de Seguro 
+`Story Points: 3` 
+### DEV
+
+### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar matriz de datos de prueba preparando casos con números duplicados, asegurados, vehículos , rangos de fechas validos e inválidos, valores asegurados negativos o cero | Medio |
