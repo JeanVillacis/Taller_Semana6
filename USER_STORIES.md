@@ -913,6 +913,16 @@ Entonces el sistema me informa que no hay reclamos pendientes de revisión
 
 **Prioridad:** Alta  
 **Story Points:** 3
+### Criterios de Aceptación (Gherkin)
+ 
+#### Escenario 1: Aprobación manual de un reclamo con justificación
+```gherkin
+Dado que soy un gestor autenticado en el sistema
+Y existe un reclamo en estado de revisión manual
+Cuando decido aprobar el reclamo y registro mi justificación
+Entonces el reclamo cambia al estado de aprobado por gestor
+Y el sistema registra la fecha y la justificación ingresada
+```
 
 
 ## HU-013: Consulta de estado de reclamo por el asegurado
