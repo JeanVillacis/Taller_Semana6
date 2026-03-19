@@ -202,7 +202,21 @@
 
 ## HU-007: Registro de Reclamo de Siniestro
 `Story Points: 5`
+
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear entidad JPA `Reclamo` con atributos (poliza_id, fecha_incidente, descripcion, monto_estimado, ubicacion, estado, numero_seguimiento) | Medio |
+| 2 | Crear entidad JPA `ReclamoFotografia` con relación `@OneToMany` hacia Reclamo para almacenar la URL de cada imagen | Medio |
+| 3 | Configurar repositorios para Reclamo y ReclamoFotografia con métodos personalizados necesarios | Bajo |
+| 4 | Implementar service de almacenamiento de archivos que valide formato PNG/JPG, tamaño y guarde las imágenes en el filesystem | Alto |
+| 5 | Generar número de seguimiento único con formato "REC-YYYY-NNN" de forma secuencial | Medio |
+| 6 | Implementar service de registro de reclamos validando: póliza activa, campos obligatorios, monto > 0 y fecha del incidente dentro de la vigencia | Alto |
+| 7 | Crear DTO de request que soporte subida de archivos múltiples junto con los datos del reclamo | Medio |
+| 8 | Exponer `POST /api/v1/reclamos` en el controller recibiendo multipart/form-data con datos y fotografías | Medio |
+| 9 | Validar formato de archivos adjuntos aceptando solo PNG y JPG, rechazando otros formatos con mensaje claro | Medio |
+| 10 | Implementar persistencia transaccional con `@Transactional` para revertir el reclamo si falla el guardado de fotografías | Medio |
+
 
 ### QA
 **Justificación SP:** Para rol QA el esfuerzo es alto porque requiere probar múltiples escenarios de archivos, validar la transaccionalidad y asegurar que no haya casos límite sin cubrir.
