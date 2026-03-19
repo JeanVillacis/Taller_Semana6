@@ -902,7 +902,16 @@ Cuando el motor de reglas evalúa el historial del asegurado
 Entonces el reclamo "REC-2026-012" cambia al estado "EN REVISIÓN MANUAL"
 Y se registra la bandera "Historial de siniestros recientes"
 ```
-
+#### CP003-HU-010: Escalamiento por múltiples banderas (monto elevado + historial)
+```gherkin
+Dado que existe el reclamo "REC-2026-014" con monto estimado de $6,000.00
+Y la póliza asociada tiene un valor asegurado de $25,000.00
+Y el reclamo tiene la bandera "Monto elevado respecto al valor asegurado" de la evaluación anterior
+Y el asegurado "Carlos Ruiz" tiene 3 siniestros registrados en los últimos 12 meses
+Cuando el motor de reglas evalúa el reclamo
+Entonces el reclamo "REC-2026-014" cambia al estado "EN REVISIÓN MANUAL"
+Y se registran las banderas "Monto elevado respecto al valor asegurado" e "Historial de siniestros recientes"
+```
 
 ## HU-011: Panel del gestor de seguros
 
