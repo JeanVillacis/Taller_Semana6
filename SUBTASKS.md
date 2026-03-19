@@ -233,7 +233,19 @@
 
 ## HU-008: Validación de póliza para procesamiento de reclamo 
 `Story Points: 5`
+
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar interfaz del motor de reglas con contrato genérico para evaluar reglas de negocio sobre un reclamo | Medio |
+| 2 | Implementar regla de vigencia de póliza verificando si está activa y si la fecha del incidente está dentro del rango | Medio |
+| 3 | Implementar regla de antigüedad de póliza calculando la diferencia entre inicio de vigencia y fecha del reclamo, escalando si es < 30 días | Medio |
+| 4 | Crear entidad JPA `ReclamoBandera` para registrar las banderas rojas de cada reclamo con su descripción | Medio |
+| 5 | Implementar service coordinador que orqueste las reglas en orden: vigencia → antigüedad → monto e historial | Alto |
+| 6 | Actualizar service de registro de reclamos para que invoque automáticamente al motor de reglas tras persistir el reclamo | Medio |
+| 7 | Implementar cambio de estado del reclamo con métodos para actualizar a RECHAZADO, EN REVISIÓN MANUAL, etc. y registrar motivos | Medio |
+| 8 | Agregar logs de auditoría con logging detallado de cada evaluación de regla para trazabilidad y debugging | Medio |
+ 
 ### QA
 **Justificación SP:** Para rol QA el esfuerzo  es alto porque requiere probar cada regla de forma aislada y en combinación de validar la póliza.
 | # | Tarea | Esfuerzo |
