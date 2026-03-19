@@ -149,7 +149,7 @@
 | 3 | Manejar excepción cuando el vehículo no existe |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Preparar datos de prueba creando vehículos de diferentes marcas y años para validar| Bajo |
  
