@@ -128,6 +128,7 @@
 | 6 | Manejar excepción de placa duplicada |
  
 ### QA
+**Justificación SP:** En el rol QA se enfoca en probar las validaciones y casos límite del formato de placa. La complejidad se justifica por las diferentes validaciones que se debe realizar por el formato de la placa en Ecuador
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con placas duplicadas, años inválidos (texto, negativos, futuros), campos obligatorios faltantes, y formatos de placa incorrectos | Medio |
