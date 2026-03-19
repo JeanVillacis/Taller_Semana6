@@ -1064,6 +1064,15 @@ Cuando consulta el estado del reclamo "REC-2026-007"
 Entonces el sistema muestra el estado "RECHAZADO POR GESTOR"
 Y se muestra el motivo "Las fotografías no corresponden con la descripción del siniestro reportado."
 ```
+#### CP005-HU-013: Consulta de reclamo rechazado por póliza no vigente
+```gherkin
+Dado que el asegurado "Carlos Ruiz" ha iniciado sesión en el sistema
+Y tiene el reclamo "REC-2026-002" que fue rechazado con motivo "Póliza no vigente"
+Cuando consulta el estado del reclamo "REC-2026-002"
+Entonces el sistema muestra el estado "RECHAZADO"
+Y se muestra el motivo "Póliza no vigente"
+```
+
 ## Historias Técnicas y de Arquitectura
 
 
