@@ -107,7 +107,7 @@
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Generar datos de prueba en la base de datos para validar que el listado y la consulta individual funcionen  | Bajo |
- 
+| 2 | Escribir tests de integración para ambos endpoints verificando que GET devuelva la consulta correcta | Medio |
 ---
 
 ## HU-003 – Registrar Vehículo
