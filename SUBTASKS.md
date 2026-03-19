@@ -83,9 +83,10 @@
 | 6 | Implementar `POST /api/v1/asegurados` en el controller |
 
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1| Diseñar la matriz de datos de prueba con diferentes combinaciones de datos válidos e inválidos: campos vacíos, identificaciones duplicadas, correos con formato incorrecto, y casos límite en longitudes de campos | Medio |
 
 ---
 
