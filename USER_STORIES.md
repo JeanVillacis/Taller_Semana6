@@ -893,6 +893,16 @@ Cuando el motor de reglas evalúa el historial del asegurado
 Entonces el reclamo "REC-2026-005" cambia al estado "APROBADO AUTOMÁTICAMENTE"
 Y se registra el monto aprobado de $3,150.00
 ```
+#### CP002-HU-010: Escalamiento por historial con exactamente 2 siniestros en 12 meses
+```gherkin
+Dado que existe el reclamo "REC-2026-012" con monto estimado de $4,000.00
+Y el reclamo pasó la evaluación de monto sin banderas
+Y el asegurado "Carlos Ruiz" tiene 2 siniestros registrados en los últimos 12 meses
+Cuando el motor de reglas evalúa el historial del asegurado
+Entonces el reclamo "REC-2026-012" cambia al estado "EN REVISIÓN MANUAL"
+Y se registra la bandera "Historial de siniestros recientes"
+```
+
 
 ## HU-011: Panel del gestor de seguros
 
