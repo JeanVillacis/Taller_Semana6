@@ -210,3 +210,4 @@
 |---|-------|----------|
 | 1 | Diseñar casos de prueba para cada regla preparando datos con pólizas inactivas, vencidas, con antigüedad definidas en las reglas de las polizas | Medio |
 | 2 | Escribir tests unitarios de cada regla probando las reglas de forma aislada con diferentes estados de póliza y fechas | Alto |
+| 03 | Crear tests de integración del flujo completo verificando que al registrar un reclamo | Alto |
