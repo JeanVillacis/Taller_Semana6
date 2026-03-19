@@ -187,10 +187,11 @@
 
 ## HU-007: Registro de Reclamo de Siniestro
 `Story Points: 5`
-**Justificación SP:** Para rol QA el esfuerzo es alto porque requiere probar múltiples escenarios de archivos, validar la transaccionalidad y asegurar que no haya casos límite sin cubrir.
 ### DEV
 
 ### QA
+**Justificación SP:** Para rol QA el esfuerzo es alto porque requiere probar múltiples escenarios de archivos, validar la transaccionalidad y asegurar que no haya casos límite sin cubrir.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar matriz de datos de prueba preparando casos con pólizas inactivas, fechas futuras, montos cero o negativos, fotografías en formatos incorrectos, sin fotografías | Medio |
