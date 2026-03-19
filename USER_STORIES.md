@@ -906,7 +906,16 @@ Cuando accedo al panel de reclamos escalados
 Entonces el sistema me informa que no hay reclamos pendientes de revisión
 ```
 
-## HU-012: Consulta de estado de reclamo por el asegurado
+## HU-012: Resolución manual de reclamos escalados
+**Como** gestor de seguros,  
+**Quiero** registrar mi decisión de aprobación o rechazo sobre un reclamo escalado junto con una justificación,
+**Para** resolver los casos que requieren criterio humano dejando trazabilidad de la decisión.
+
+**Prioridad:** Alta  
+**Story Points:** 3
+
+
+## HU-013: Consulta de estado de reclamo por el asegurado
 
 **Como** asegurado,  
 **Quiero** consultar el estado actual de mi reclamo y conocer el motivo de la decisión tomada,
