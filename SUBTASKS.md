@@ -7,14 +7,14 @@
 
 
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Inicializar proyecto Spring Boot con dependencias: Web, Data JPA, Validation, Security y JWT|
-| 2 | Configurar `application.properties` con las variables de entorno para la conexión a la BD |
-| 3 | Crear `Dockerfile` para la aplicación Spring Boot |
-| 4 | Crear `docker-compose.yml` que levante la aplicación Spring Boot |
-| 5 | Implementar endpoint `GET /api/health` |
-
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Inicializar proyecto Spring Boot con dependencias: Web, Data JPA, Validation, Security y JWT| Medio |
+| 2 | Configurar `application.properties` con las variables de entorno para la conexión a la BD | Bajo |
+| 3 | Crear `Dockerfile` para la aplicación Spring Boot | Bajo |
+| 4 | Crear `docker-compose.yml` que levante la aplicación Spring Boot | Bajo |
+| 5 | Implementar endpoint `GET /api/health` | Bajo |
+ 
 ### QA
 | # | Tarea |
 |---|-------|
@@ -28,14 +28,13 @@
 **Justificación SP:** Define el esquema completo del sistema con relaciones entre múltiples entidades y constraints de integridad referencial.
 
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Definir entidades JPA: `Asegurado`, `Vehiculo`, `Poliza`, `Reclamo`, `ReclamoFotografia`, `ReclamoBandera` |
-| 2 | Configurar relaciones `@OneToMany` y `@ManyToOne` entre entidades |
-| 3 | Agregar contenedor PostgreSQL al `docker-compose.yml` con variables de entorno |
-| 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas |
-| 5 | Agregar constraint de integridad referencial: no eliminar asegurado con pólizas vinculadas |
-
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Definir entidades JPA: `Asegurado`, `Vehiculo`, `Poliza`, `Reclamo`, `ReclamoFotografia`, `ReclamoBandera` | Alto |
+| 2 | Configurar relaciones `@OneToMany` y `@ManyToOne` entre entidades | Medio |
+| 3 | Agregar contenedor PostgreSQL al `docker-compose.yml` con variables de entorno | Bajo |
+| 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas | Bajo |
+| 5 | Agregar constraint de integridad referencial: no eliminar asegurado con póliz
 ### QA
 | # | Tarea |
 |---|-------|
@@ -49,15 +48,15 @@
 **Justificación SP:** Involucra Spring Security, JWT, filtros de autenticación y control de acceso por roles.
 
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Crear entidad `Usuario` con atributos (email, password, rol)|
-| 2 | Implementar repositorio `UsuarioRepository` |
-| 3 | Implementar `POST /api/v1/auth/login` que valida credenciales y retorna token JWT |
-| 4 | Implementar filtro JWT para validar token en cada request protegido |
-| 5 | Configurar `SecurityFilterChain` con reglas por rol: GESTOR, ASEGURADO |
-| 6 | Hashear contraseñas antes de guardarlas |
-
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear entidad `Usuario` con atributos (email, password, rol) | Bajo |
+| 2 | Implementar repositorio `UsuarioRepository` | Bajo |
+| 3 | Implementar `POST /api/v1/auth/login` que valida credenciales y retorna token JWT | Alto |
+| 4 | Implementar filtro JWT para validar token en cada request protegido | Alto |
+| 5 | Configurar `SecurityFilterChain` con reglas por rol: GESTOR, ASEGURADO | Medio |
+| 6 | Hashear contraseñas antes de guardarlas | Bajo |
+ 
 ### QA
 | # | Tarea |
 |---|-------|
@@ -73,15 +72,15 @@
 **Justificación SP:** Validaciones múltiples y manejo de varios escenarios de error.
 
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Crear entidad JPA `Asegurado` con sus atributos (nombre, apellido, numeroIdentificacion, direccion, telefono, correoElectronico) |
-| 2 | Implementar repositorio `AseguradoRepository` |
-| 3 | Implementar validaciones de unicidad de identificacion y correo |
-| 4 | Crear DTO `AseguradoDTO` |
-| 5 | Crear service `AseguradoService` con la logica de negocio para registrar asegurados |
-| 6 | Implementar `POST /api/v1/asegurados` en el controller |
-
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear entidad JPA `Asegurado` con sus atributos (nombre, apellido, numeroIdentificacion, direccion, telefono, correoElectronico) | Bajo |
+| 2 | Implementar repositorio `AseguradoRepository` | Bajo |
+| 3 | Implementar validaciones de unicidad de identificacion y correo | Medio |
+| 4 | Crear DTO `AseguradoDTO` | Bajo |
+| 5 | Crear service `AseguradoService` con la logica de negocio para registrar asegurados | Medio |
+| 6 | Implementar `POST /api/v1/asegurados` en el controller | Medio |
+ 
 ### QA
 **Justificación SP:** En el rol de QA para esta historia de usuario refleja la necesidad de validar  las reglas de negocio y casos límite para asegurar la integridad de los datos.
 | # | Tarea | Esfuerzo |
@@ -97,11 +96,11 @@
 **Justificación SP:** Solo lectura con dos endpoints simples y manejo de un único caso de error.
  
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Implementar `GET /api/v1/asegurados` que retorna lista con información básica de cada asegurado |
-| 2 | Implementar `GET /api/v1/asegurados/{id}` que retorna el detalle completo del asegurado |
-| 3 | Manejar excepción cuando el asegurado no existe |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Implementar `GET /api/v1/asegurados` que retorna lista con información básica de cada asegurado | Bajo |
+| 2 | Implementar `GET /api/v1/asegurados/{id}` que retorna el detalle completo del asegurado | Bajo |
+| 3 | Manejar excepción cuando el asegurado no existe | Bajo |
  
 ### QA
 **Justificación SP:** En el rol de QA se concentra en verificar diferentes escenarios de consulta, casos límite y performance básica.
@@ -118,14 +117,14 @@
 **Justificación SP:** Parecido a HU-001, validaciones múltiples y manejo de varios escenarios de error.
  
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Crear entidad JPA `Vehiculo` con atributos (marca, modelo, anio, placa) |
-| 2 | Implementar repositorio `VehiculoRepository` con validación de unicidad de placa |
-| 3 | Crear DTO `VehiculoRequestDTO` y `VehiculoResponseDTO` |
-| 4 | Implementar validaciones: campos obligatorios, formato de placa, año numérico positivo |
-| 5 | Implementar `POST /api/v1/vehiculos` con respuesta HTTP 201 para creaciones exitosas |
-| 6 | Manejar excepción de placa duplicada |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear entidad JPA `Vehiculo` con atributos (marca, modelo, anio, placa) | Bajo |
+| 2 | Implementar repositorio `VehiculoRepository` con validación de unicidad de placa | Bajo |
+| 3 | Crear DTO `VehiculoRequestDTO` y `VehiculoResponseDTO` | Bajo |
+| 4 | Implementar validaciones: campos obligatorios, formato de placa, año numérico positivo | Medio |
+| 5 | Implementar `POST /api/v1/vehiculos` con respuesta HTTP 201 para creaciones exitosas | Medio |
+| 6 | Manejar excepción de placa duplicada | Bajo |
  
 ### QA
 **Justificación SP:** En el rol QA se enfoca en probar las validaciones y casos límite del formato de placa. La complejidad se justifica por las diferentes validaciones que se debe realizar por el formato de la placa en Ecuador
@@ -142,11 +141,11 @@
 **Justificación SP:** Solo lectura con dos endpoints simples y manejo de un único caso de error.
  
 ### DEV
-| # | Tarea |
-|---|-------|
-| 1 | Implementar `GET /api/v1/vehiculos` que retorna lista con información básica de cada vehículo |
-| 2 | Implementar `GET /api/v1/vehiculos/{id}` que retorna el detalle completo del vehículo |
-| 3 | Manejar excepción cuando el vehículo no existe |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Implementar `GET /api/v1/vehiculos` que retorna lista con información básica de cada vehículo | Bajo |
+| 2 | Implementar `GET /api/v1/vehiculos/{id}` que retorna el detalle completo del vehículo | Bajo |
+| 3 | Manejar excepción cuando el vehículo no existe | Bajo |
  
 ### QA
 **Justificación SP:** Para rol de QA incluye realizar diferentes tipos de test para verificar que las consultas para buscar vehículos se ejecuten de manera correcta.
