@@ -1030,8 +1030,16 @@ Cuando consulto el estado de ese reclamo
 Entonces visualizo que el reclamo fue rechazado
 Y se me muestra el motivo registrado por el gestor
 ```
-
-
+### Casos de Prueba
+ 
+#### CP001-HU-012: Consulta de reclamo aprobado automáticamente
+```gherkin
+Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Y tiene el reclamo "REC-2026-005" que fue aprobado automáticamente con monto aprobado de $3,150.00 y deducible aplicado de $350.00
+Cuando consulta el estado del reclamo "REC-2026-005"
+Entonces el sistema muestra el estado "APROBADO"
+Y se muestra el monto aprobado "$3,150.00" y el deducible aplicado "$350.00"
+```
 ## Historias Técnicas y de Arquitectura
 
 
