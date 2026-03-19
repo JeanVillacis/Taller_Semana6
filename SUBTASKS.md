@@ -266,9 +266,10 @@
 
 ### DEV
 ### QA
-**Justificación SP:**
+**Justificación SP:** El esfuerzo QA se enfoca en validar la autorización, las justificaciones, y la trazabilidad completa. 
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1| Diseñar casos de prueba para aprobación y rechazo preparando para cada escenario | Medio |
 | 2 | Escribir tests de validación de justificación verificando que el sistema rechace dependiendo la justificación | Medio |
 | 3 | Crear tests de integración del endpoint probando el flujo completo | Alto |
+| 4 | Ejecutar pruebas exploratorias de justificaciones probando diferentes textos. | Medio |
