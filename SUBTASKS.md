@@ -128,11 +128,10 @@
 | 6 | Manejar excepción de placa duplicada |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
- 
----
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar matriz de datos de prueba preparando casos con placas duplicadas, años inválidos (texto, negativos, futuros), campos obligatorios faltantes, y formatos de placa incorrectos | Medio |
+
 
 ## HU-004 – Consultar Vehículos
 `Story Points: 2`
