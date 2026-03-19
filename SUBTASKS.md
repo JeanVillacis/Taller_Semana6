@@ -89,7 +89,7 @@
 | 1| Diseñar la matriz de datos de prueba con diferentes combinaciones de datos válidos e inválidos: campos vacíos, identificaciones duplicadas, correos con formato incorrecto, y casos límite en longitudes de campos | Medio |
 | 2| Escribir tests unitarios del servicio de negocio para verificar que las validaciones de unicidad y formato| Medio |
 |3 | Crear tests de integración para el endpoint POST para probar el flujo completo desde el controller, validando respuestas HTTP y estructura de errores | Alto |
----
+|4 | Ejecutar pruebas exploratorias sobre el registro utilizando pruebas automatizadas| Medio |
 
 ## HU-002 – Consultar Asegurados
 `Story Points: 2`
