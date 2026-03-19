@@ -282,3 +282,5 @@
 |---|-------|----------|
 | 1 | Preparar casos de prueba para cada estado posible creando reclamos en todos los estados| Medio |
 |2| Escribir tests de integración del endpoint verificando que el endpoint devuelva la información según el estado del reclamo | Medio |
+| 3| Verificar mensajes de decisión descriptivos asegurando que cada estado devuelva un mensaje claro | Medio |
+| 4 | Ejecutar pruebas exploratorias de diferentes estados verificando su visualización | Medio |
