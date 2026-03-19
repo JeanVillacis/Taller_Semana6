@@ -104,11 +104,13 @@
 | 3 | Manejar excepción cuando el asegurado no existe |
  
 ### QA
+**Justificación SP:** En el rol de QA se concentra en verificar diferentes escenarios de consulta, casos límite y performance básica.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Generar datos de prueba en la base de datos para validar que el listado y la consulta individual funcionen  | Bajo |
 | 2 | Escribir tests de integración para ambos endpoints verificando que GET devuelva la consulta correcta | Medio |
----
+| 3 | Realizar pruebas de consultas masivas con diferentes volumenes validando el tiempo de respuesta del listado | Medio |
 
 ## HU-003 – Registrar Vehículo
 `Story Points: 3`
