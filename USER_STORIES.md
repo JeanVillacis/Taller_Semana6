@@ -905,6 +905,17 @@ Y no existen reclamos en estado de revisión manual pendientes de resolución
 Cuando accedo al panel de reclamos escalados
 Entonces el sistema me informa que no hay reclamos pendientes de revisión
 ```
+### Casos de Prueba
+ 
+#### CP001-HU-011: Visualización del listado con reclamos escalados pendientes
+```gherkin
+Dado que el gestor "Ana García" ha iniciado sesión en el sistema
+Y existen los siguientes reclamos en estado de revisión manual
+Cuando accede al panel de reclamos escalados
+Entonces el sistema muestra un listado con los reclamos "REC-2026-003" y "REC-2026-007"
+Y para el reclamo "REC-2026-003" se muestra asegurado "Juan Pérez", monto "$3,500.00", fecha "15/03/2026" y bandera "Antigüedad de póliza insuficiente"
+```
+
 
 ## HU-012: Resolución manual de reclamos escalados
 **Como** gestor de seguros,  
