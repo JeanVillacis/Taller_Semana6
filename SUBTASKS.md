@@ -212,3 +212,4 @@
 | 2 | Escribir tests unitarios de cada regla probando las reglas de forma aislada con diferentes estados de póliza y fechas | Alto |
 | 3 | Crear tests de integración del flujo completo verificando que al registrar un reclamo | Alto |
 | 4 | Validar que se registren las banderas correctamente verificando que cuando un reclamo se escala| Medio |
+| 5 | Probar casos límite de fechas validas al regustrar un reclamo | Medio |
