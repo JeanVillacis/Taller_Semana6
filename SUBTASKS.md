@@ -200,3 +200,11 @@
 | 5 | Probar límites de tamaño del tamaño de los archivos de fotografías, validando los posibles casos | Medio |
 | 6 | Realizar pruebas exploratorias de formatos de imagen probando con archivos, con extensión cambiada diferente | Medio |
 | 7 | Validar mensajes de error descriptivos asegurando que cada tipo de error devuelva un mensaje claro  | Medio |
+
+## HU-008: Validación de póliza para procesamiento de reclamo 
+`Story Points: 5`
+### DEV
+### QA
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Diseñar casos de prueba para cada regla preparando datos con pólizas inactivas, vencidas, con antigüedad definidas en las reglas de las polizas | Medio |
