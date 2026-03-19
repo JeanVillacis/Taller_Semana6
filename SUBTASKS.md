@@ -181,7 +181,14 @@
 
 ## HU-006: Consultar Pólizas
 `Story Points: 2`
+
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Agregar métodos de consulta al repositorio asegurando que se carguen las relaciones necesarias con `findAll()` y `findById()` | Bajo |
+| 2 | Implementar service de consulta con métodos para listado y detalle, incluyendo información del asegurado y vehículo asociados | Medio |
+| 3 | Crear DTOs de response con datos de la póliza y resúmenes del asegurado y vehículo vinculados | Medio |
+| 4 | Exponer `GET /api/v1/polizas` para listado y `GET /api/v1/polizas/{id}` para detalle en el controller | Medio |
 
 ### QA
 **Justificación SP:** Para rol de QA se enfoca en validar la consultas correctas obteniendo información completa de las polizas.
