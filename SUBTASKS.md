@@ -285,6 +285,15 @@
 `Story Points: 3`
 
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear consulta de historial en el repositorio de Reclamos que cuente los siniestros de un asegurado en los últimos 12 meses | Medio |
+| 2 | Implementar regla de historial limpio aprobando automáticamente si el asegurado tiene 0 siniestros en los últimos 12 meses | Medio |
+| 3 | Implementar regla de historial con banderas escalando a revisión manual si el asegurado tiene >= 2 siniestros en los últimos 12 meses | Medio |
+| 4 | Integrar reglas de historial en el coordinador para que se ejecuten después de las reglas de monto | Medio |
+| 5 | Implementar aprobación automática final cambiando el estado a APROBADO y calculando el monto aprobado (monto estimado - deducible) cuando todas las reglas pasen | Medio |
+| 6 | Agregar campo de fecha de resolución con timestamp de cuándo se resolvió el reclamo (automática o manualmente) | Bajo |
+
 ### QA
 **Justificación SP:** Para rol QA se enfoca en probar combinaciones de historial y verificar el flujo end-to-end desde el registro hasta la aprobación. 
 | # | Tarea | Esfuerzo |
