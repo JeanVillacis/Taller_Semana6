@@ -905,31 +905,7 @@ Y no existen reclamos en estado de revisión manual pendientes de resolución
 Cuando accedo al panel de reclamos escalados
 Entonces el sistema me informa que no hay reclamos pendientes de revisión
 ```
-#### Escenario 3: Aprobación manual de un reclamo con justificación
-```gherkin
-Dado que soy un gestor autenticado en el sistema
-Y existe un reclamo en estado de revisión manual
-Cuando decido aprobar el reclamo y registro mi justificación
-Entonces el reclamo cambia al estado de aprobado por gestor
-Y el sistema registra mi identidad, la fecha y la justificación ingresada
-```
-#### Escenario 4: Rechazo manual de un reclamo con justificación
-```gherkin
-Dado que soy un gestor autenticado en el sistema
-Y existe un reclamo en estado de revisión manual
-Cuando decido rechazar el reclamo y registro mi justificación
-Entonces el reclamo cambia al estado de rechazado por gestor
-Y el sistema registra mi identidad, la fecha y la justificación ingresada
-```
-#### Escenario 5: Intento de resolución sin justificación
-```gherkin
-Dado que soy un gestor autenticado en el sistema
-Y existe un reclamo en estado de revisión manual
-Cuando intento aprobar o rechazar el reclamo sin ingresar una justificación
-Entonces el sistema rechaza la operación
-Y me indica que la justificación es obligatoria para registrar una resolución
-Y el estado del reclamo permanece sin cambios
-```
+
 ## HU-012: Consulta de estado de reclamo por el asegurado
 
 **Como** asegurado,  
