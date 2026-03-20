@@ -327,6 +327,15 @@
 `Story Points: 3`
 
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Crear DTO de request para resolución con la decisión (aprobar/rechazar) y la justificación obligatoria | Medio |
+| 2 | Implementar service de resolución manual que actualice el estado, registre la justificación, el gestor responsable y la fecha de resolución | Alto |
+| 3 | Validar que la justificación no esté vacía antes de procesar la resolución | Bajo |
+| 4 | Exponer `PUT /api/v1/reclamos/{numeroSeguimiento}/resolucion` protegido con rol GESTOR para registrar la decisión manual | Medio |
+| 5 | Agregar campos de auditoría en la entidad Reclamo para almacenar el ID del gestor que tomó la decisión | Medio |
+| 6 | Implementar notificación al asegurado como placeholder registrando un log por ahora, sin envío real de emails | Medio |
+
 ### QA
 **Justificación SP:** El esfuerzo QA se enfoca en validar la autorización, las justificaciones, y la trazabilidad completa. 
 | # | Tarea | Esfuerzo |
