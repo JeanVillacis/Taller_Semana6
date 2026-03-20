@@ -890,7 +890,7 @@ Entonces el sistema me informa que no hay reclamos pendientes de revisión
  
 #### CP001-HU-011: Visualización del listado con reclamos escalados pendientes
 ```gherkin
-Dado que el gestor "Ana García" ha iniciado sesión en el sistema
+Dado que el gestor "Ana García" autenticado  en el sistema
 Y existen los siguientes reclamos en estado de revisión manual
 Cuando accede al panel de reclamos escalados
 Entonces el sistema muestra un listado con los reclamos "REC-2026-003" y "REC-2026-007"
@@ -899,7 +899,7 @@ Y para el reclamo "REC-2026-003" se muestra asegurado "Juan Pérez", monto "$3,5
  
 #### CP002-HU-011: Panel sin reclamos pendientes de revisión
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor ha autenticado en el sistema
 Y no existen reclamos en estado de revisión manual en el sistema
 Cuando accede al panel de reclamos escalados
 Entonces el sistema muestra un mensaje indicando "No hay reclamos pendientes de revisión"
@@ -944,7 +944,7 @@ Y el estado del reclamo permanece sin cambios
  
 #### CP001-HU-012: Aprobación exitosa de reclamo escalado con justificación
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor esta autenticado  en el sistema
 Y existe el reclamo "REC-2026-003" en estado "EN REVISIÓN MANUAL" del asegurado "Juan Pérez"
 Y el reclamo tiene la bandera "Antigüedad de póliza insuficiente"
 Cuando trabaja con el reclamo "REC-2026-003"
@@ -956,7 +956,7 @@ Y el sistema registra el responsable, la fecha "18/03/2026" y la justificación 
 ```
 #### CP002-HU-012: Rechazo de reclamo escalado con justificación
 ```gherkin
-Dado que el gestor "Ana García" ha iniciado sesión en el sistema
+Dado que el gestor "Ana García" esta autenticado  en el sistema
 Y existe el reclamo "REC-2026-007" en estado "EN REVISIÓN MANUAL" del asegurado "María López"
 Y el reclamo tiene la bandera "Monto elevado respecto al valor asegurado"
 Cuando trabaja con el reclamo "REC-2026-007"
@@ -1015,7 +1015,7 @@ Y se me muestra el motivo registrado por el gestor
  
 #### CP001-HU-013: Consulta de reclamo aprobado automáticamente
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado  en el sistema
 Y tiene el reclamo "REC-2026-005" que fue aprobado automáticamente con monto aprobado de $3,150.00 y deducible aplicado de $350.00
 Cuando consulta el estado del reclamo "REC-2026-005"
 Entonces el sistema muestra el estado "APROBADO"
@@ -1023,7 +1023,7 @@ Y se muestra el monto aprobado "$3,150.00" y el deducible aplicado "$350.00"
 ```
 #### CP002-HU-013: Consulta de reclamo en revisión manual
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado  en el sistema
 Y tiene el reclamo "REC-2026-003" que se encuentra en estado "EN REVISIÓN MANUAL"
 Cuando consulta el estado del reclamo "REC-2026-003"
 Entonces el sistema muestra el estado "EN REVISIÓN MANUAL"
@@ -1031,7 +1031,7 @@ Y se muestra el mensaje "Su reclamo se encuentra en revisión manual"
 ```
 #### CP003-HU-013: Consulta de reclamo descartado por monto inferior al deducible
 ```gherkin
-Dado que el asegurado "María López" ha iniciado sesión en el sistema
+Dado que el asegurado "María López" autenticado  en el sistema
 Y tiene el reclamo "REC-2026-008" que fue descartado con motivo "El monto no supera el deducible"
 Cuando consulta el estado del reclamo "REC-2026-008"
 Entonces el sistema muestra el estado "DESCARTADO"
@@ -1039,7 +1039,7 @@ Y se muestra el motivo "El monto no supera el deducible"
 ```
 #### CP004-HU-013: Consulta de reclamo rechazado por gestor con justificación
 ```gherkin
-Dado que el asegurado "María López" ha iniciado sesión en el sistema
+Dado que el asegurado "María López" esta autenticado en el sistema
 Y tiene el reclamo "REC-2026-007" que fue rechazado por el gestor "Ana García" con justificación "Las fotografías no corresponden con la descripción del siniestro reportado."
 Cuando consulta el estado del reclamo "REC-2026-007"
 Entonces el sistema muestra el estado "RECHAZADO POR GESTOR"
@@ -1047,7 +1047,7 @@ Y se muestra el motivo "Las fotografías no corresponden con la descripción del
 ```
 #### CP005-HU-013: Consulta de reclamo rechazado por póliza no vigente
 ```gherkin
-Dado que el asegurado "Carlos Ruiz" ha iniciado sesión en el sistema
+Dado que el asegurado "Carlos Ruiz" esta autenticado en el sistema
 Y tiene el reclamo "REC-2026-002" que fue rechazado con motivo "Póliza no vigente"
 Cuando consulta el estado del reclamo "REC-2026-002"
 Entonces el sistema muestra el estado "RECHAZADO"
