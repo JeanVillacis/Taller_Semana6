@@ -611,11 +611,11 @@ Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Y la fecha actual es "17/03/2026"
 Cuando selecciona la póliza "POL-2026-001"
-Y ingresa "25/12/2026" en el campo fecha del incidente
+Cuando registra una póliza con fecha del incidente "25/12/2026"
 Y completa el resto de campos con datos válidos
 Y adjunta el archivo "foto_siniestro.jpg"
 Y registro un reclamo
-Entonces el sistema muestra un mensaje de error indicando que la fecha del incidente no puede ser en el futuro
+Entonces el sistema notifica que la fecha del incidente no puede ser en el futuro
 Y no se crea ningún registro de reclamo
 ```
 #### CP006-HU-007: Intento de registro con archivo en formato PDF
