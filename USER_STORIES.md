@@ -363,7 +363,7 @@ Y no se crea ningún registro de póliza en el sistema
 
 #### CP001-HU-005: Registro exitoso de póliza con todos los datos válidos
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Y existe el asegurado "Juan Pérez" con identificación "1712345678"
 Y existe el vehículo "Chevrolet Aveo" con placa "PBA-1234"
 Cuando registra un vehículo con número de póliza "POL-2026-001"
@@ -374,14 +374,14 @@ Entonces el sistema notifica "Póliza registrada exitosamente"
 ```
 #### CP002-HU-005: Intento de registro asociando un vehículo inexistente
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando intenta asociar la póliza a un vehículo que no existe en el sistema
 Entonces el sistema notifica indicando que el vehículo indicado no se encuentra registrado
 ```
 
 #### CP003-HU-005: Intento de registro con número de póliza duplicado
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Y existe la póliza "POL-2026-001" registrada en el sistema
 Cuando registra la póliza con número "POL-2026-001"
 Y proporciona los demás datos válidos
@@ -391,7 +391,7 @@ Entonces el sistema notifica indicando que ya existe una póliza con el número 
 
 #### CP004-HU-005: Intento de registro con fecha fin anterior a fecha inicio
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando registra un asegurado con número de póliza "POL-2026-002"
 Cuando registra un vechículo con valor asegurado "25000.00", fecha de inicio de vigencia "01/06/2026", fecha de fin de vigencia "01/01/2026"
 Y confirma el registro
@@ -400,7 +400,7 @@ Entonces el sistema notifica  el rango de fechas no es válido
 
 #### CP005-HU-005: Intento de registro con valor asegurado menor o igual a cero
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Cuando registra un asegurado con número de póliza "POL-2026-003"
 Y vincula un asegurado y vehículo válidos
 Y ingresa fechas de vigencia válidas
