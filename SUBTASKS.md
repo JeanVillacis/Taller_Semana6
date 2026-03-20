@@ -380,6 +380,9 @@
 `Story Points: 3`
 
 ### DEV
+
+**Justificación SP:** Filtro de autorización por asegurado y formateo de mensajes según estado.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Implementar consulta en el repositorio que busque un reclamo por su número de seguimiento único | Bajo |
