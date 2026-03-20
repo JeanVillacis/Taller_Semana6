@@ -38,9 +38,10 @@
 | 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas | Bajo |
 | 5 | Agregar constraint de integridad referencial: no eliminar asegurado con póliz
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Validar generación del esquema levantando la aplicación y verificando que todas las tablas se creen correctamente en PostgreSQL | Medio |
+| 2 | Verificar restricciones de integridad intentando borrar registros con relaciones | Medio |
 
 
 
