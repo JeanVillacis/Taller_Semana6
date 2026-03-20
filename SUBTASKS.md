@@ -332,6 +332,9 @@
 `Story Points: 3`
 
 ### DEV
+
+**Justificación SP:** Consultas complejas con múltiples relaciones cargadas y control de acceso por rol.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Crear consulta en el repositorio que filtre reclamos por estado "EN REVISIÓN MANUAL" | Medio |
