@@ -53,16 +53,10 @@ Y muestra un mensaje indicando el error en el correo
 #### CP001-HU-001: Registro exitoso con todos los datos válidos
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de asegurados
-Cuando ingresa "Juan" en el campo nombre
-Y ingresa "Pérez" en el campo apellido
-Y ingresa "1712345678" en el campo identificación
-Y ingresa "Av. Amazonas N36-152" en el campo dirección
-Y ingresa "0991234567" en el campo teléfono
-Y ingresa "juan.perez@correo.com" en el campo correo electrónico
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de confirmación "Asegurado registrado exitosamente"
-Y el asegurado "Juan Pérez" aparece en el listado de asegurados
+Cuando registra un asegurado proporcionand nombre "Juan", apellido "Pérez", identificación "1712345678", dirección "Av. Amazonas N36-152", teléfono "0991234567" y correo electrónico "juan.perez@correo.com"
+Y confirma el registro
+Entonces el sistema crea el asegurado exitosamente
+Y el asegurado "Juan Pérez" queda disponible en el listado de asegurados.
 ```
 
 #### CP002-HU-001: Intento de registro sin completar el campo nombre
