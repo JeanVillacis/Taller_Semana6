@@ -578,7 +578,7 @@ Y el reclamo aparece como "REGISTRADO"
 Dado que el asegurado "Carlos Ruiz" ha iniciado sesión en el sistema
 Y no tiene ninguna póliza activa y vigente
 Cuando intenta acceder al registro de reclamos
-Entonces el sistema muestra un mensaje indicando que no es posible registrar reclamos sin una póliza activa y vigente
+Entonces el sistema notifica que no es posible registrar reclamos sin una póliza activa y vigente
 ```
 #### CP003-HU-007: Intento de registro sin completar el campo descripción
 ```gherkin
