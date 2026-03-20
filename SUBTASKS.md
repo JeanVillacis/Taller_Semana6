@@ -15,6 +15,7 @@
 | 5 | Implementar endpoint `GET /api/health` | Bajo |
 
 ### QA
+**Justificación SP:** Validación de entorno e infraestructura sin lógica de negocio compleja.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Validar que el proyecto compile sin errores ejecutando del clean compile | Bajo |
@@ -37,6 +38,7 @@
 | 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas | Bajo |
 | 5 | Agregar constraint de integridad referencial: no eliminar asegurado con póliz
 ### QA
+**Justificación SP:** Verificación de esquema, relaciones y restricciones de integridad en BD.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Validar generación del esquema levantando la aplicación y verificando que todas las tablas se creen correctamente en PostgreSQL | Medio |
@@ -63,6 +65,7 @@
 | 6 | Hashear contraseñas antes de guardarlas | Bajo |
  
 ### QA
+**Justificación SP:** Valida autorización por asegurado y mensajes descriptivos por tipo de resolución.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 |1 | Validar el flujo completo de login: hacer POST con credenciales válidas y verificar que se devuelva un token JWT | Medio |
