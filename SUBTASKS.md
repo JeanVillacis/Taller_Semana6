@@ -65,7 +65,7 @@
 | 6 | Hashear contraseñas antes de guardarlas | Bajo |
  
 ### QA
-**Justificación SP:** Valida autorización por asegurado y mensajes descriptivos por tipo de resolución.
+**Justificación SP:** Cubre flujo JWT, control de acceso por roles y almacenamiento seguro de contraseñas.
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 |1 | Validar el flujo completo de login: hacer POST con credenciales válidas y verificar que se devuelva un token JWT | Medio |
