@@ -5,7 +5,6 @@
 
 **Justificación SP:** Infraestructura base sin lógica de negocio, pero es la base del proyecto y requiere configuración de entorno.
 
-
 ### DEV
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
@@ -14,7 +13,7 @@
 | 3 | Crear `Dockerfile` para la aplicación Spring Boot | Bajo |
 | 4 | Crear `docker-compose.yml` que levante la aplicación Spring Boot | Bajo |
 | 5 | Implementar endpoint `GET /api/health` | Bajo |
- 
+
 ### QA
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
@@ -168,6 +167,9 @@
 `Story Points: 3` 
 
 ### DEV
+
+**Justificación SP:** El esfuerzo de DEV es medio-alto por las múltiples validaciones de negocio: unicidad, relaciones entre entidades, rangos de fechas y estado automático.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Crear entidad JPA `Poliza` con atributos (numero, aseguradoId, vehiculoId, valorAsegurado, vigenciaInicio, vigenciaFin, estado) usando anotaciones `@ManyToOne` para las relaciones | Medio |
