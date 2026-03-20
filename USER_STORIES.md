@@ -52,7 +52,7 @@ Y muestra un mensaje indicando el error en el correo
 
 #### CP001-HU-001: Registro exitoso con todos los datos válidos
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  sesión en el sistema
 Cuando registra un asegurado proporcionand nombre "Juan", apellido "Pérez", identificación "1712345678", dirección "Av. Amazonas N36-152", teléfono "0991234567" y correo electrónico "juan.perez@correo.com"
 Y confirma el registro
 Entonces el sistema crea el asegurado exitosamente
@@ -61,7 +61,7 @@ Y el asegurado "Juan Pérez" queda disponible en el listado de asegurados.
 
 #### CP002-HU-001: Intento de registro sin completar el campo nombre
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando intenta registrar omitiendo el campo nombre pero apellido "Pérez", identificación "1712345678", dirección "Av. Amazonas N36-152", teléfono "0991234567", correo electrónico "juan.perez@correo.com"
 Y confirma el registro
 Entonces el sistema  notifica que el campo nombre es obligatorio
@@ -70,7 +70,7 @@ Y no se crea ningún registro de asegurado en el sistema
 
 #### CP003-HU-001: Intento de registro sin completar ningún campo
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando omite todos los datos obligatorios
 Y confirma el registro
 Entonces el sistema notifica todos los campos obligatorios faltantes
@@ -79,7 +79,7 @@ Y no se crea ningún registro de asegurado en el sistema
 
 #### CP004-HU-001: Intento de registro con identificación ya existente
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Y existe un asegurado registrado con identificación "1712345678"
 Cuando registra a un asegurado con nombre "María", apellido "López", identificación "1712345678"
 Y completa los datos válidos
@@ -90,7 +90,7 @@ Y no se crea un nuevo registro de asegurado
 
 #### CP005-HU-001: Intento de registro con correo electrónico en formato inválido
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando registra a un asegurado con nombre "Juan", apellido "Pérez", identificación "1712345679", dirección "Av. Amazonas N36-152", teléfono "0991234567", correo electrónico "juan.perez-correo"
 Y confirma el registro
 Entonces el sistema notifica el error indicando que el formato de correo electrónico no es válido
