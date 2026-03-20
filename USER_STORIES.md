@@ -304,8 +304,8 @@ Entonces el sistema muestra el detalle con marca "Chevrolet", modelo "Aveo", añ
 #### CP003-HU-004: Intento de consulta de un vehículo que no existe
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Cuando intenta buscar un vehículo con placa "ZZZ-0000" que no existe en el sistema
-Entonces el sistema muestra un mensaje indicando que no se encontró ningún vehículo
+Cuando consulta un vehículo con placa "ZZZ-0000" que no existe en el sistema
+Entonces el sistema muestra notifica que no se encontró ningún vehículo
 Y no se muestra información
 ```
 
