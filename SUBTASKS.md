@@ -396,6 +396,8 @@
 | 6 | Agregar formateo de motivos devolviendo mensajes amigables para cada tipo de resolución (aprobado, rechazado, en revisión, descartado) | Medio |
 
 ### QA
+**Justificación SP:** Valida autorización por asegurado y mensajes descriptivos por tipo de resolución.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Preparar casos de prueba para cada estado posible creando reclamos en todos los estados| Medio |
