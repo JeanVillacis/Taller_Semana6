@@ -222,13 +222,9 @@ Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" aparece en el listado de ve
 #### CP002-HU-003: Intento de registro sin completar el campo marca
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de vehículos
-Cuando deja vacío el campo marca
-Y ingresa "Aveo" en el campo modelo
-Y ingresa "2022" en el campo año
-Y ingresa "PBA-1235" en el campo placa
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de error indicando que el campo marca es obligatorio
+Cuando intenta registrar omitiendo la marca pero modelo "Aveo", año "2022", placa "PBA-1235"
+Y confirma el registro
+Entonces el sistema notifica el error indicando que el campo marca es obligatorio
 Y no se crea ningún registro de vehículo
 ```
 
