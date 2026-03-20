@@ -64,9 +64,9 @@
 | 6 | Hashear contraseñas antes de guardarlas | Bajo |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+|1 | Validar el flujo completo de login: hacer POST con credenciales válidas y verificar que se devuelva un token JWT | Medio |
 
 
 
