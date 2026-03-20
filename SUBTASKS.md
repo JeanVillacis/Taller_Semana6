@@ -351,10 +351,14 @@
 | 1 | Preparar datos de prueba con reclamos escalados creando múltiples reclamos en estado de revisión manual | Medio |
 | 2 | Escribir tests de integración del endpoint de listado verificando que el endpoint devuelva correctamente los reclamos  | Medio |
 | 3 | Ejecutar pruebas exploratorias del panel navegando manualmente por el panel verificando que todos los datos se muestren correctamente | Medio |
+
 ##  HU-012: Resolución de reclamo escalado por el gestor
 `Story Points: 3`
 
 ### DEV
+
+**Justificación SP:** Resolución manual con validaciones, auditoría del gestor y placeholder de notificación.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Crear DTO de request para resolución con la decisión (aprobar/rechazar) y la justificación obligatoria | Medio |
