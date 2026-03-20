@@ -16,9 +16,11 @@
 | 5 | Implementar endpoint `GET /api/health` | Bajo |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Validar que el proyecto compile sin errores ejecutando del clean compile | Bajo |
+| 2 | Probar el levantamiento con docker-compose ejecutando docker-compose up y verificando que el contenedor arranque correctamente | Medio |
+
 
 
 
