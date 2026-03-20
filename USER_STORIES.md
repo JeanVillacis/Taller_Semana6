@@ -366,14 +366,11 @@ Y no se crea ningún registro de póliza en el sistema
 Dado que el gestor ha iniciado sesión en el sistema
 Y existe el asegurado "Juan Pérez" con identificación "1712345678"
 Y existe el vehículo "Chevrolet Aveo" con placa "PBA-1234"
-Cuando ingresa "POL-2026-001" en el campo número de póliza
-Y selecciona al asegurado "Juan Pérez"
-Y selecciona el vehículo "Chevrolet Aveo - PBA-1234"
-Y ingresa "25000.00" en el campo valor asegurado
-Y ingresa "01/01/2026" en el campo fecha de inicio de vigencia
-Y ingresa "01/01/2027" en el campo fecha de fin de vigencia
-Y guarda la información
-Entonces el sistema muestra un mensaje de confirmación "Póliza registrada exitosamente"
+Cuando registra un vehículo con número de póliza "POL-2026-001"
+Y vincula al asegurado "Juan Pérez"
+Y vincula el vehículo "Chevrolet Aveo - PBA-1234"
+Y confirma el registro
+Entonces el sistema notifica "Póliza registrada exitosamente"
 ```
 #### CP002-HU-005: Intento de registro asociando un vehículo inexistente
 ```gherkin
