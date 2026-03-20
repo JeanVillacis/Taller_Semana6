@@ -42,6 +42,9 @@
 |---|-------|----------|
 | 1 | Validar generación del esquema levantando la aplicación y verificando que todas las tablas se creen correctamente en PostgreSQL | Medio |
 | 2 | Verificar restricciones de integridad intentando borrar registros con relaciones | Medio |
+| 3 | Probar inserción de datos de prueba en cada entidad verificando que las relaciones funcionen correctamente | Medio |
+| 4 | Validar que los campos obligatorios se respeten a nivel de base de datos | Bajo |
+
 
 
 
