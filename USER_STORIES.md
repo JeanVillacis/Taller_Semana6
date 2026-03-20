@@ -366,7 +366,7 @@ Y no se crea ningún registro de póliza en el sistema
 Dado que el gestor está autenticado en el sistema
 Y existe el asegurado "Juan Pérez" con identificación "1712345678"
 Y existe el vehículo "Chevrolet Aveo" con placa "PBA-1234"
-Cuando registra un vehículo con número de póliza "POL-2026-001"
+Cuando registra una póliza "POL-2026-001"
 Y vincula al asegurado "Juan Pérez"
 Y vincula el vehículo "Chevrolet Aveo - PBA-1234"
 Y confirma el registro
@@ -393,7 +393,7 @@ Entonces el sistema notifica indicando que ya existe una póliza con el número 
 ```gherkin
 Dado que el gestor está autenticado  en el sistema
 Cuando registra un asegurado con número de póliza "POL-2026-002"
-Cuando registra un vechículo con valor asegurado "25000.00", fecha de inicio de vigencia "01/06/2026", fecha de fin de vigencia "01/01/2026"
+Y proporciona valor asegurado "25000.00", fecha de inicio de vigencia "01/06/2026",
 Y confirma el registro
 Entonces el sistema notifica  el rango de fechas no es válido
 ```
