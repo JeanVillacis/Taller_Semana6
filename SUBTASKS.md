@@ -69,7 +69,7 @@
 |1 | Validar el flujo completo de login: hacer POST con credenciales válidas y verificar que se devuelva un token JWT | Medio |
 | 2 | Probar login con credenciales inválidas y verificar que se devuelva un 404 con mensaje descriptivo | Bajo |
 | 3 | Validar que los endpoints protegidos rechacen requests sin token | Medio |
-
+| 4| Validar que las contraseñas se almacenen hasheadas en la base de datos y no en texto plano | Bajo |
 
 
 # Historias de Usuario
