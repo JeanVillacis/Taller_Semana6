@@ -71,10 +71,9 @@ Y no se crea ningún registro de asegurado en el sistema
 #### CP003-HU-001: Intento de registro sin completar ningún campo
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de asegurados
-Cuando deja vacíos todos los campos del formulario
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra mensajes de error indicando todos los campos obligatorios faltantes
+Cuando omite todos los datos obligatorios
+Y confirma el registro
+Entonces el sistema notifica todos los campos obligatorios faltantes
 Y no se crea ningún registro de asegurado en el sistema
 ```
 
