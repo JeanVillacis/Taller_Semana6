@@ -566,14 +566,10 @@ Y no se crea ningún registro de reclamo en el sistema
 ```gherkin
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente con valor asegurado de $25,000.00
-Cuando selecciona la póliza "POL-2026-001"
-Y ingresa "15/03/2026" en el campo fecha del incidente
-Y ingresa "Colisión" en el campo descripción
-Y ingresa "3500.00" en el campo monto estimado
-Y ingresa "Av. Amazonas y Av. Naciones Unidas, Quito" en el campo ubicación
+Cuando registra una póliza con fecha del incidente "15/03/2026", descripción "Colisión", monto estimado "3500.00", ubicación "Av. Amazonas y Av. Naciones Unidas, Quito"
 Y adjunta el archivo "foto_siniestro.jpg"
 Y realiza el registro del reclamo
-Entonces el sistema muestra un mensaje de confirmación "Reclamo registrado exitosamente"
+Entonces el sistema notifica "Reclamo registrado exitosamente"
 Y el sistema asigna un número de seguimiento al reclamo
 Y el reclamo aparece como "REGISTRADO"
 ```
