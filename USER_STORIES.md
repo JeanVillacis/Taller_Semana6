@@ -635,7 +635,7 @@ Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando completa todos los campos obligatorios con datos válidos
 Y no adjunta ninguna fotografía
 Y registro un reclamo
-Entonces el sistema muestra un mensaje de error indicando que es obligatorio adjuntar al menos una fotografía
+Entonces el sistema notifica indicando que es obligatorio adjuntar al menos una fotografía
 Y no se crea ningún registro de reclamo
 ```
 
