@@ -585,13 +585,12 @@ Entonces el sistema notifica que no es posible registrar reclamos sin una póliz
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando selecciona la póliza "POL-2026-001"
-Y ingresa "15/03/2026" en el campo fecha del incidente
-Y deja vacío el campo descripción
-Y ingresa "3500.00" en el campo monto estimado
-Y ingresa "Quito" en el campo ubicación
+Cuando registra una póliza con fecha del incidente "15/03/2026"
+Y omite el campo descripción
+Cuando registra una póliza con monto estimado "3500.00", ubicación "Quito"
 Y adjunta el archivo "foto_siniestro.jpg"
 Y registro un reclamo
-Entonces el sistema muestra un mensaje de error indicando que el campo descripción es obligatorio
+Entonces el sistema notifica que el campo descripción es obligatorio
 Y no se crea ningún registro de reclamo
 ```
 #### CP004-HU-007: Intento de registro con monto estimado igual a cero
