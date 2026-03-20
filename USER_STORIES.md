@@ -241,13 +241,9 @@ Y no se crea ningún registro nuevo
 #### CP004-HU-003: Intento de registro con año en formato inválido
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de vehículos
-Cuando ingresa "Chevrolet" en el campo marca
-Y ingresa "Aveo" en el campo modelo
-Y ingresa "veintidos" en el campo año
-Y ingresa "PBA-1236" en el campo placa
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de error indicando que el campo año debe ser un valor numérico válido
+Cuando registra un asegurado con marca "Chevrolet" , modelo "Aveo", año "veintidos", placa "PBA-1236"
+Y confirma el registro
+Entonces el sistema notifica indicando que el campo año debe ser un valor numérico válido
 Y no se crea ningún registro de vehículo
 ```
 
