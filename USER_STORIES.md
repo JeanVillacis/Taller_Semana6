@@ -52,7 +52,7 @@ Y muestra un mensaje indicando el error en el correo
 
 #### CP001-HU-001: Registro exitoso con todos los datos válidos
 ```gherkin
-Dado que el gestor está autenticado  sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Cuando registra un asegurado proporcionando nombre "Juan", apellido "Pérez", identificación "1712345678", dirección "Av. Amazonas N36-152", teléfono "0991234567" y correo electrónico "juan.perez@correo.com"
 Y confirma el registro
 Entonces el sistema crea el asegurado exitosamente
