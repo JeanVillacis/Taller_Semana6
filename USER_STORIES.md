@@ -625,7 +625,7 @@ Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando completa todos los campos obligatorios con datos válidos
 Y adjunta el archivo "documento.pdf"
 Y registro un reclamo
-Entonces el sistema muestra un mensaje de error indicando que solo se permiten fotografías en formato png o jpg
+Entonces el sistema notifica que solo se permiten fotografías en formato png o jpg
 Y no se crea ningún registro de reclamo
 ```
 #### CP008-HU-007: Intento de registro sin adjuntar ninguna fotografía
