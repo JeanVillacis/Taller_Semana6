@@ -279,6 +279,9 @@
 `Story Points: 5`
 
 ### DEV
+
+**Justificación SP:** Cálculos financieros con tres variables para el deducible e integración en el coordinador.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Implementar cálculo del deducible como el mayor entre: 10% del monto del siniestro, 1% del valor asegurado, y $200 | Medio |
