@@ -348,6 +348,15 @@
 `Story Points: 3`
 
 ### DEV
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Implementar consulta en el repositorio que busque un reclamo por su número de seguimiento único | Bajo |
+| 2 | Implementar service de consulta de estado que devuelva el estado, motivo de decisión (si aplica) y detalles del reclamo | Medio |
+| 3 | Crear DTO de response con estado, motivo, monto aprobado (si aplica) y deducible | Medio |
+| 4 | Exponer `GET /api/v1/reclamos/{numeroSeguimiento}/estado` protegido con rol ASEGURADO permitiendo consultar solo sus propios reclamos | Medio |
+| 5 | Implementar filtro de autorización asegurando que un asegurado solo pueda ver sus propios reclamos | Alto |
+| 6 | Agregar formateo de motivos devolviendo mensajes amigables para cada tipo de resolución (aprobado, rechazado, en revisión, descartado) | Medio |
+
 ### QA
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
