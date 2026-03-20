@@ -598,13 +598,10 @@ Y no se crea ningún registro de reclamo
 Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando selecciona la póliza "POL-2026-001"
-Y ingresa "15/03/2026" en el campo fecha del incidente
-Y ingresa "Colisión leve" en el campo descripción
-Y ingresa "0" en el campo monto estimado
-Y ingresa "Quito" en el campo ubicación
+Cuando registra una póliza con fecha del incidente "15/03/2026", descripción "Colisión leve", monto estimado "0", ubicación "Quito"
 Y adjunta el archivo "foto_siniestro.jpg"
 Y registro un reclamo
-Entonces el sistema muestra un mensaje de error indicando que el monto estimado debe ser un valor positivo
+Entonces el sistema notifica que el monto estimado debe ser un valor positivo
 Y no se crea ningún registro de reclamo
 ```
 
