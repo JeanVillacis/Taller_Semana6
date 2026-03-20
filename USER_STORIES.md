@@ -212,7 +212,7 @@ Y no se crea ningún registro nuevo en el sistema
 
 #### CP001-HU-003: Registro exitoso de vehículo con todos los datos válidos
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Cuando registra un vehículo con marca "Chevrolet", modelo "Aveo", año "2022", placa "PBA-1234"
 Y confirma el registro
 Entonces el sistema notifica la confirmación "Vehículo registrado exitosamente"
@@ -221,7 +221,7 @@ Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" queda registrado.
 
 #### CP002-HU-003: Intento de registro sin completar el campo marca
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Cuando intenta registrar omitiendo la marca pero modelo "Aveo", año "2022", placa "PBA-1235"
 Y confirma el registro
 Entonces el sistema notifica el error indicando que el campo marca es obligatorio
@@ -230,7 +230,7 @@ Y no se crea ningún registro de vehículo
 
 #### CP003-HU-003: Intento de registro con placa ya existente
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Y existe un vehículo registrado con placa "PBA-1234"
 Cuando registra un vehiculo con la marca "Kia" , modelo "Rio", año "2023", placa "PBA-1234"
 Y confirma el registro
@@ -240,7 +240,7 @@ Y no se crea ningún registro nuevo
 
 #### CP004-HU-003: Intento de registro con año en formato inválido
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Cuando registra un asegurado con marca "Chevrolet" , modelo "Aveo", año "veintidos", placa "PBA-1236"
 Y confirma el registro
 Entonces el sistema notifica indicando que el campo año debe ser un valor numérico válido
