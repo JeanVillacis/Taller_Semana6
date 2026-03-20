@@ -564,7 +564,7 @@ Y no se crea ningún registro de reclamo en el sistema
 
 #### CP001-HU-007: Registro exitoso de reclamo con todos los datos válidos y fotografía jpg
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente con valor asegurado de $25,000.00
 Cuando registra una póliza con fecha del incidente "15/03/2026", descripción "Colisión", monto estimado "3500.00", ubicación "Av. Amazonas y Av. Naciones Unidas, Quito"
 Y adjunta el archivo "foto_siniestro.jpg"
@@ -575,14 +575,14 @@ Y el reclamo aparece como "REGISTRADO"
 ```
 #### CP002-HU-007: Intento de registro sin póliza activa disponible
 ```gherkin
-Dado que el asegurado "Carlos Ruiz" ha iniciado sesión en el sistema
+Dado que el asegurado "Carlos Ruiz" autenticado en el sistema
 Y no tiene ninguna póliza activa y vigente
 Cuando intenta acceder al registro de reclamos
 Entonces el sistema notifica que no es posible registrar reclamos sin una póliza activa y vigente
 ```
 #### CP003-HU-007: Intento de registro sin completar el campo descripción
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando selecciona la póliza "POL-2026-001"
 Cuando registra una póliza con fecha del incidente "15/03/2026"
@@ -595,7 +595,7 @@ Y no se crea ningún registro de reclamo
 ```
 #### CP004-HU-007: Intento de registro con monto estimado igual a cero
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando selecciona la póliza "POL-2026-001"
 Cuando registra una póliza con fecha del incidente "15/03/2026", descripción "Colisión leve", monto estimado "0", ubicación "Quito"
@@ -607,7 +607,7 @@ Y no se crea ningún registro de reclamo
 
 #### CP005-HU-007: Intento de registro con fecha de incidente en el futuro
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Y la fecha actual es "17/03/2026"
 Cuando selecciona la póliza "POL-2026-001"
@@ -620,7 +620,7 @@ Y no se crea ningún registro de reclamo
 ```
 #### CP006-HU-007: Intento de registro con archivo en formato PDF
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando completa todos los campos obligatorios con datos válidos
 Y adjunta el archivo "documento.pdf"
@@ -630,7 +630,7 @@ Y no se crea ningún registro de reclamo
 ```
 #### CP008-HU-007: Intento de registro sin adjuntar ninguna fotografía
 ```gherkin
-Dado que el asegurado "Juan Pérez" ha iniciado sesión en el sistema
+Dado que el asegurado "Juan Pérez" autenticado en el sistema
 Y tiene la póliza "POL-2026-001" activa y vigente
 Cuando completa todos los campos obligatorios con datos válidos
 Y no adjunta ninguna fotografía
