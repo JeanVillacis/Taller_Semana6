@@ -383,10 +383,10 @@ Entonces el sistema notifica indicando que el vehículo indicado no se encuentra
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existe la póliza "POL-2026-001" registrada en el sistema
-Cuando ingresa "POL-2026-001" en el campo número de póliza
-Y completa el resto de campos con datos válidos
-Y desea guardar la información
-Entonces el sistema muestra un mensaje de error indicando que ya existe una póliza con el número "POL-2026-001"
+Cuando registra la póliza con número "POL-2026-001"
+Y proporciona los demás datos válidos
+Y confirma el registro la información
+Entonces el sistema notifica indicando que ya existe una póliza con el número "POL-2026-001"
 ```
 
 #### CP004-HU-005: Intento de registro con fecha fin anterior a fecha inicio
