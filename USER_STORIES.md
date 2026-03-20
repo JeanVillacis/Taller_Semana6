@@ -155,7 +155,7 @@ Entonces el sistema muestra el detalle con nombre "Juan", apellido "Pérez", ide
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Cuando intenta buscar un asegurado con identificación "0000000000" que no existe en el sistema
-Entonces el sistema muestra un mensaje indicando que no se encontró ningún asegurado
+Entonces el sistema notifica que no se encontró ningún asegurado
 ```
 
 
