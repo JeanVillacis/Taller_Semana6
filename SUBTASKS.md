@@ -217,6 +217,9 @@
 `Story Points: 5`
 
 ### DEV
+
+**Justificación SP:** Gestión de archivos multipart, generación de número de seguimiento y persistencia transaccional.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Crear entidad JPA `Reclamo` con atributos (poliza_id, fecha_incidente, descripcion, monto_estimado, ubicacion, estado, numero_seguimiento) | Medio |
