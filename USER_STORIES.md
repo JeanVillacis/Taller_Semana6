@@ -376,7 +376,7 @@ Entonces el sistema notifica "Póliza registrada exitosamente"
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Cuando intenta asociar la póliza a un vehículo que no existe en el sistema
-Entonces el sistema muestra un mensaje de error indicando que el vehículo indicado no se encuentra registrado
+Entonces el sistema notifica indicando que el vehículo indicado no se encuentra registrado
 ```
 
 #### CP003-HU-005: Intento de registro con número de póliza duplicado
