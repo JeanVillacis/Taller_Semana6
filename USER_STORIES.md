@@ -136,7 +136,7 @@ Y no se muestra información parcial ni de otro asegurado
 
 #### CP001-HU-002: Visualización del listado con asegurados registrados
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado  en el sistema
 Y existen los asegurados "Juan Pérez" (ID: 1712345678) y "María López" (ID: 1798765432) registrados
 Cuando consulta "Asegurados"
 Entonces el sistema presenta un listado que contiene al menos a "Juan Pérez" y "María López"
@@ -145,7 +145,7 @@ Y cada fila muestra nombre, apellido e identificación del asegurado
 
 #### CP002-HU-002: Consulta del detalle de un asegurado existente
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Y existe el asegurado "Juan Pérez" con identificación "1712345678"
 Cuando busque al asegurado con identificación "1712345678"
 Entonces el sistema muestra el detalle con nombre "Juan", apellido "Pérez", identificación "1712345678", dirección, teléfono y correo electrónico
@@ -153,7 +153,7 @@ Entonces el sistema muestra el detalle con nombre "Juan", apellido "Pérez", ide
 
 #### CP003-HU-002: Intento de consulta de un asegurado que no existe
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor está autenticado en el sistema
 Cuando intenta buscar un asegurado con identificación "0000000000" que no existe en el sistema
 Entonces el sistema notifica que no se encontró ningún asegurado
 ```
