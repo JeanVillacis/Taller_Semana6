@@ -216,7 +216,7 @@ Dado que el gestor ha iniciado sesión en el sistema
 Cuando registra un vehículo con marca "Chevrolet", modelo "Aveo", año "2022", placa "PBA-1234"
 Y confirma el registro
 Entonces el sistema notifica la confirmación "Vehículo registrado exitosamente"
-Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" aparece en el listado de vehículos
+Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" queda registrado.
 ```
 
 #### CP002-HU-003: Intento de registro sin completar el campo marca
