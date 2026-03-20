@@ -213,13 +213,9 @@ Y no se crea ningún registro nuevo en el sistema
 #### CP001-HU-003: Registro exitoso de vehículo con todos los datos válidos
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de vehículos
-Cuando ingresa "Chevrolet" en el campo marca
-Y ingresa "Aveo" en el campo modelo
-Y ingresa "2022" en el campo año
-Y ingresa "PBA-1234" en el campo placa
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de confirmación "Vehículo registrado exitosamente"
+Cuando registra un vehículo con marca "Chevrolet", modelo "Aveo", año "2022", placa "PBA-1234"
+Y confirma el registro
+Entonces el sistema notifica la confirmación "Vehículo registrado exitosamente"
 Y el vehículo "Chevrolet Aveo" con placa "PBA-1234" aparece en el listado de vehículos
 ```
 
