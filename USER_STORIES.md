@@ -138,8 +138,8 @@ Y no se muestra información parcial ni de otro asegurado
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existen los asegurados "Juan Pérez" (ID: 1712345678) y "María López" (ID: 1798765432) registrados
-Cuando hace clic en la opción "Asegurados" del menú principal
-Entonces el sistema muestra un listado que contiene al menos a "Juan Pérez" y "María López"
+Cuando accede a "Asegurados" del menú principal
+Entonces el sistema presenta un listado que contiene al menos a "Juan Pérez" y "María López"
 Y cada fila muestra nombre, apellido e identificación del asegurado
 ```
 
