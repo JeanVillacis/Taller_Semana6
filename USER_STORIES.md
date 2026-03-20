@@ -947,9 +947,9 @@ Y el estado del reclamo permanece sin cambios
 Dado que el gestor ha iniciado sesión en el sistema
 Y existe el reclamo "REC-2026-003" en estado "EN REVISIÓN MANUAL" del asegurado "Juan Pérez"
 Y el reclamo tiene la bandera "Antigüedad de póliza insuficiente"
-Cuando selecciona el reclamo "REC-2026-003"
-Y selecciona la acción "Aprobar"
-Y ingresa "Verificada documentación del asegurado." en el campo justificación
+Cuando trabaja con el reclamo "REC-2026-003"
+Y Aprueba
+Cuando registra una póliza con justificación "Verificada documentación del asegurado."
 Y confirma la resolución
 Entonces el reclamo "REC-2026-003" cambia al estado "APROBADO POR GESTOR"
 Y el sistema registra el responsable, la fecha "18/03/2026" y la justificación ingresada
