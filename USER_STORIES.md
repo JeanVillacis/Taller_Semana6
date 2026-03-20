@@ -91,15 +91,9 @@ Y no se crea un nuevo registro de asegurado
 #### CP005-HU-001: Intento de registro con correo electrónico en formato inválido
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Y se encuentra en la pantalla de registro de asegurados
-Cuando ingresa "Juan" en el campo nombre
-Y ingresa "Pérez" en el campo apellido
-Y ingresa "1712345679" en el campo identificación
-Y ingresa "Av. Amazonas N36-152" en el campo dirección
-Y ingresa "0991234567" en el campo teléfono
-Y ingresa "juan.perez-correo" en el campo correo electrónico
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de error indicando que el formato de correo electrónico no es válido
+Cuando registra a un asegurado con nombre "Juan", apellido "Pérez", identificación "1712345679", dirección "Av. Amazonas N36-152", teléfono "0991234567", correo electrónico "juan.perez-correo"
+Y confirma el registro
+Entonces el sistema notifica el error indicando que el formato de correo electrónico no es válido
 Y no se crea ningún registro de asegurado en el sistema
 ```
 
