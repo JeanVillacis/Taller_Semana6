@@ -288,7 +288,7 @@ Y no se muestra información parcial ni de otro vehículo
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existen los vehículos "Chevrolet Aveo" (placa: PBA-1234) y "Kia Rio" (placa: PBC-5678) registrados
-Cuando se buscan "Vehículos"
+Cuando consultan "Vehículos"
 Entonces el sistema muestra un listado que contiene "Chevrolet Aveo" y "Kia Rio"
 Y cada fila muestra marca, modelo, año y placa del vehículo
 ```
