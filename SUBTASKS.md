@@ -193,6 +193,9 @@
 `Story Points: 2`
 
 ### DEV
+
+**Justificación SP:** Solo lectura con carga de relaciones entre entidades; la complejidad es baja al reutilizar repositorios ya existentes.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Agregar métodos de consulta al repositorio asegurando que se carguen las relaciones necesarias con `findAll()` y `findById()` | Bajo |
