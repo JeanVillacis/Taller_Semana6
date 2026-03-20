@@ -451,8 +451,8 @@ Y no se muestra información de la poliza.
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existen las pólizas "POL-2026-001" y "POL-2026-002" registradas
-Cuando busca las pólizas registradas
-Entonces el sistema muestra un listado que contiene las pólizas "POL-2026-001" y "POL-2026-002"
+Cuando consulta las pólizas registradas
+Entonces el sistema presenta un listado que contiene las pólizas "POL-2026-001" y "POL-2026-002"
 Y muestra número de póliza, asegurado, estado y fechas de vigencia
 ```
 #### CP002-HU-006: Consulta del detalle de una póliza existente
