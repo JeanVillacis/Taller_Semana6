@@ -449,7 +449,7 @@ Y no se muestra información de la poliza.
 
 #### CP001-HU-006: Visualización del listado de pólizas registradas
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor autenticado en el sistema
 Y existen las pólizas "POL-2026-001" y "POL-2026-002" registradas
 Cuando consulta las pólizas registradas
 Entonces el sistema presenta un listado que contiene las pólizas "POL-2026-001" y "POL-2026-002"
@@ -457,14 +457,14 @@ Y muestra número de póliza, asegurado, estado y fechas de vigencia
 ```
 #### CP002-HU-006: Consulta del detalle de una póliza existente
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor autenticado en el sistema
 Y existe la póliza "POL-2026-001" vinculada al asegurado "Juan Pérez" y al vehículo "Chevrolet Aveo - PBA-1234"
 Cuando busca a la póliza "POL-2026-001" en el listado
 Entonces el sistema muestra el detalle con número "POL-2026-001", valor asegurado, fechas de vigencia, estado
 ```
 #### CP003-HU-006: Intento de consulta de una póliza que no existe
 ```gherkin
-Dado que el gestor ha iniciado sesión en el sistema
+Dado que el gestor ha autenticado en el sistema
 Cuando intenta buscar la póliza "POL-0000-000" que no existe en el sistema
 Entonces el sistema notifica que no se encontró ninguna póliza
 Y no se muestra información
