@@ -392,13 +392,10 @@ Entonces el sistema notifica indicando que ya existe una póliza con el número 
 #### CP004-HU-005: Intento de registro con fecha fin anterior a fecha inicio
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
-Cuando ingresa "POL-2026-002" en el campo número de póliza
-Y selecciona un asegurado y un vehículo válidos
-Y ingresa "25000.00" en el campo valor asegurado
-Y ingresa "01/06/2026" en el campo fecha de inicio de vigencia
-Y ingresa "01/01/2026" en el campo fecha de fin de vigencia
-Y guarda la información
-Entonces el sistema muestra un mensaje de error indicando que el rango de fechas no es válido
+Cuando registra un asegurado con número de póliza "POL-2026-002"
+Cuando registra un vechículo con valor asegurado "25000.00", fecha de inicio de vigencia "01/06/2026", fecha de fin de vigencia "01/01/2026"
+Y confirma el registro
+Entonces el sistema notifica  el rango de fechas no es válido
 ```
 
 #### CP005-HU-005: Intento de registro con valor asegurado menor o igual a cero
