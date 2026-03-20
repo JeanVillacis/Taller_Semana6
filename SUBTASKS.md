@@ -16,9 +16,11 @@
 | 5 | Implementar endpoint `GET /api/health` | Bajo |
  
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Validar que el proyecto compile sin errores ejecutando del clean compile | Bajo |
+| 2 | Probar el levantamiento con docker-compose ejecutando docker-compose up y verificando que el contenedor arranque correctamente | Medio |
+|3| Verificar que las variables de entorno se carguen correctamente desde el archivo de configuración | Bajo |
 
 
 
@@ -36,9 +38,13 @@
 | 4 | Configurar `spring.jpa.hibernate.ddl-auto` en `application.properties` para la generación automática de tablas | Bajo |
 | 5 | Agregar constraint de integridad referencial: no eliminar asegurado con póliz
 ### QA
-| # | Tarea |
-|---|-------|
-| --- | --- |
+| # | Tarea | Esfuerzo |
+|---|-------|----------|
+| 1 | Validar generación del esquema levantando la aplicación y verificando que todas las tablas se creen correctamente en PostgreSQL | Medio |
+| 2 | Verificar restricciones de integridad intentando borrar registros con relaciones | Medio |
+| 3 | Probar inserción de datos de prueba en cada entidad verificando que las relaciones funcionen correctamente | Medio |
+| 4 | Validar que los campos obligatorios se respeten a nivel de base de datos | Bajo |
+
 
 
 
