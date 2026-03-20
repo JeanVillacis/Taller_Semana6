@@ -81,13 +81,10 @@ Y no se crea ningún registro de asegurado en el sistema
 ```gherkin
 Dado que el gestor ha iniciado sesión en el sistema
 Y existe un asegurado registrado con identificación "1712345678"
-Y se encuentra en la pantalla de registro de asegurados
-Cuando ingresa "María" en el campo nombre
-Y ingresa "López" en el campo apellido
-Y ingresa "1712345678" en el campo identificación
-Y completa el resto de campos con datos válidos
-Y hace clic en el botón "Guardar"
-Entonces el sistema muestra un mensaje de error indicando que ya existe un asegurado con esa identificación
+Cuando registra a un asegurado con nombre "María", apellido "López", identificación "1712345678"
+Y completa los datos válidos
+Y confirma el registro
+Entonces el sistema notifica el error indicando que ya existe un asegurado con esa identificación
 Y no se crea un nuevo registro de asegurado
 ```
 
