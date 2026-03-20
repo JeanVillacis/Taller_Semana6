@@ -307,6 +307,9 @@
 `Story Points: 3`
 
 ### DEV
+
+**Justificación SP:** Consulta de historial con rango de fechas, dos reglas de evaluación y aprobación automática final.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Crear consulta de historial en el repositorio de Reclamos que cuente los siniestros de un asegurado en los últimos 12 meses | Medio |
