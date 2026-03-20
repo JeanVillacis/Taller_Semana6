@@ -251,6 +251,9 @@
 `Story Points: 5`
 
 ### DEV
+
+**Justificación SP:** Motor de reglas extensible con múltiples reglas encadenadas y logs de auditoría.
+
 | # | Tarea | Esfuerzo |
 |---|-------|----------|
 | 1 | Diseñar interfaz del motor de reglas con contrato genérico para evaluar reglas de negocio sobre un reclamo | Medio |
