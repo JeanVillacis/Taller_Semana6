@@ -18,6 +18,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/health").permitAll()
                         .requestMatchers("/api/v1/asegurados/**").permitAll()
                         .requestMatchers("/api/v1/vehiculos/**").permitAll()
+                        .requestMatchers("/api/v1/polizas/**").permitAll()
                         .anyRequest().authenticated()
 
                 );
